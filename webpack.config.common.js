@@ -1,7 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/app/main.ts',
+    entry: './frontend/app/main.ts',
     resolve: {
         extensions: ['.js', '.ts']
     },
@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'frontend/index.html'
         })
     ]
 };
