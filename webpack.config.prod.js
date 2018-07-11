@@ -5,6 +5,8 @@ var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.config.common');
 var ngw = require('@ngtools/webpack');
 
+
+
 module.exports = webpackMerge(commonConfig, {
   entry: './frontend/app/main.aot.ts',
   output: {

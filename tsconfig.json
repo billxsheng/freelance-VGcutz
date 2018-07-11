@@ -1,12 +1,16 @@
+
+
 {
   "compilerOptions": {
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "lib": [
       "es5",
-      "dom"
+      "dom",
+      "scripthost",
+      "es2015"
     ]
   }
 }
