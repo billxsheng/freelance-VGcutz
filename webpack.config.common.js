@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'frontend/index.html'
+            template: 'frontend/views/index.html'
         })
     ]
 };

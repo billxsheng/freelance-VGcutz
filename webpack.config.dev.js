@@ -6,7 +6,7 @@ var commonConfig = require('./webpack.config.common');
 module.exports = webpackMerge(commonConfig, {
     devtool: 'cheap-module-eval-source-map',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist'),
         publicPath: '/',
         filename: 'bundle.js',
         chunkFilename: '[id].chunk.js'
