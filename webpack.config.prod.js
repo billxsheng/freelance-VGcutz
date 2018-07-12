@@ -10,7 +10,7 @@ var ngw = require('@ngtools/webpack');
 module.exports = webpackMerge(commonConfig, {
   entry: './frontend/app/main.aot.ts',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js',
     chunkFilename: '[id].[hash].chunk.js'
@@ -24,7 +24,6 @@ module.exports = webpackMerge(commonConfig, {
       },
       {
         test: /\.ts$/,
-        loaders: ['ts-loader'],
         use: [
           {loader: 'awesome-typescript-loader'},
           {loader: 'angular2-template-loader'},

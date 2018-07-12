@@ -12,5 +12,6 @@
       "scripthost",
       "es2015"
     ]
-  }
+  },
+  "exclude": ["node_modules", "src/app/polyfills.ts", "src/app/main.aot.ts"    ]
 }
