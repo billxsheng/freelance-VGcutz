@@ -2,12 +2,15 @@
     height: 150vh;
     margin: 30px !important;
     border-radius: 15px !important;
+    background: linear-gradient(to bottom right, rgb(249, 244, 255), rgb(247, 239, 228)) !important;
+    box-shadow: 15px 20px rgba(247, 247, 247, 0.486)
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+
 
 @media (max-width: 991px) {
     .jumbotron {
