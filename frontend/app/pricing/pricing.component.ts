@@ -9,4 +9,6 @@ export class PricingComponent implements OnInit {
     ngOnInit() {
         $("h1").css('color', 'red');
     }
+
+   
 }
