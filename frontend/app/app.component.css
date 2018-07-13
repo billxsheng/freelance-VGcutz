@@ -1,3 +1,18 @@
-h1 {
-    color: blue;
+.jumbotron {
+    height: 150vh;
+    margin: 30px !important;
+    border-radius: 15px !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .jumbotron {
+        height: 150vh;
+        margin: 0px !important;
+        border-radius: 0px !important;
+    }
 }

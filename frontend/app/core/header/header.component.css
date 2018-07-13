@@ -1,0 +1,46 @@
+* {
+    font-family: 'Bungee Inline' !important;
+}
+
+.navbar-brand {
+    margin-left: 1rem !important;
+}
+
+.navbar-fixed-top {
+    min-height: 80px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+.navbar-nav li {
+    margin-right: 1rem;
+}
+
+.navbar {
+    background: linear-gradient(to bottom right, rgb(19, 14, 66), rgb(74, 10, 146));
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+
+}
+
+.nav-item a {
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav>li>a {
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    
+    }
+}

@@ -7,10 +7,11 @@ import { AppRoutingModule } from "../app-routing.module";
         HeaderComponent,
     ],
     imports: [
-        //AppRoutingModule
+        AppRoutingModule
     ],
     exports: [
-        HeaderComponent
+        HeaderComponent,
+        AppRoutingModule
     ],
     providers: [
 
