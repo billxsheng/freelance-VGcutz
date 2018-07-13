@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, OnInit } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./home.component";
 
@@ -11,6 +11,8 @@ import { HomeComponent } from "./home.component";
         RouterModule
     ]
 })
-export class HomeRoutingModule {
+export class HomeRoutingModule  {
+
+
     
 }

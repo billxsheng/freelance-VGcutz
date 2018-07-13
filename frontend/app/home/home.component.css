@@ -1,0 +1,27 @@
+h1, h2 {
+    font-family: 'Bungee Inline'
+}
+
+.hero {
+    background-color: aqua;
+    height: 80vh;
+    margin-bottom: 0 !important;
+}
+
+p {
+    font-family: 'roboto'
+}
+
+.options {
+    height: 50vh !important;
+    margin: 0 !important; 
+}
+
+.options div {
+    display: inline-block !important;
+    text-align: center;
+}
+
+.main div {
+    display: inline-block !important;
+}

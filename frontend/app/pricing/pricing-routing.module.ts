@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, OnInit, AfterViewInit } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { PricingComponent } from "./pricing.component";
 
@@ -12,5 +12,6 @@ import { PricingComponent } from "./pricing.component";
     ]
 })
 export class PricingRoutingModule {
+    
 
 }

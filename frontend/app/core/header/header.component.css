@@ -2,6 +2,11 @@
     font-family: 'Bungee Inline' !important;
 }
 
+
+.nav-primary {
+    display: none;
+}
+
 .navbar-brand {
     margin-left: 1rem !important;
 }
@@ -17,11 +22,11 @@
 }
 
 .navbar-nav li {
-    margin-right: 1rem;
+    margin-right: 0rem;
 }
 
 .navbar {
-    background: linear-gradient(to bottom right, rgb(24, 24, 77), rgb(32, 19, 48));
+    background-color: transparent !important;
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
 }
@@ -32,6 +37,13 @@ nav a {
 
 .logo {
     max-height: 80px !important;
+}
+
+.nav-scroll {
+    background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 991px) {
@@ -45,5 +57,9 @@ nav a {
         border-top-left-radius: 0px !important;
         border-top-right-radius: 0px !important;
     
+    }
+
+    .navbar-toggler {
+        
     }
 }

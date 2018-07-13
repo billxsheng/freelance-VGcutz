@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
     entry: './frontend/app/main.ts',
@@ -22,6 +23,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'frontend/views/index.html'
-        })
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+          })
     ]
 };
