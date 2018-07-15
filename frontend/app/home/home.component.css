@@ -11,6 +11,7 @@
 .hero {
     height: 80vh;
     margin-bottom: 0 !important;
+    
 }
 
 p {
@@ -18,9 +19,17 @@ p {
 }
 
 .options {
-    height: auto !important;
+    height: 400px !important;
     background-color: white;
+    
 }
+
+.options-container {
+    background-color: white;
+    box-shadow:  0 0 25px #ccc;
+}
+
+
 
 .options a, .options a:visited {
     display: inline-block !important;
@@ -30,13 +39,18 @@ p {
     border-radius: 20px;
     color: black;
     width: 100%;
-    margin: 20px, 0;
+    position: relative;
+    top: 70px;
 }
 
 .options-content * {
     position: relative;
     top: 50px;
 }
+
+
+
+
 
 
 .options a:hover {
