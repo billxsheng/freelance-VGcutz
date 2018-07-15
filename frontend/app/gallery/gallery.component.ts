@@ -1,9 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     templateUrl: './gallery.component.html',
-    styles: ['./gallery.component.css']
+    styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent {
-
+export class GalleryComponent implements OnInit {
+    ngOnInit() {
+        window.scroll(0,0);
+    }
 }

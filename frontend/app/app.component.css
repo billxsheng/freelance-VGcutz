@@ -10,6 +10,8 @@
     background: linear-gradient(to bottom right, rgb(31, 31, 150), rgb(28, 6, 54)) !important;
 }
 
+
+
 @media (max-width: 991px) {
     .controller {
         height: 150vh;

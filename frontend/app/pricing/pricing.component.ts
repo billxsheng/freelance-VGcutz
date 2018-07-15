@@ -5,7 +5,8 @@ import { Component, AfterViewInit, OnInit } from "@angular/core";
     templateUrl: './pricing.component.html',
     styleUrls: ['./pricing.component.css']
 })
-export class PricingComponent {
-
-   
+export class PricingComponent implements OnInit {
+    ngOnInit() {
+        window.scroll(0,0);
+    }
 }

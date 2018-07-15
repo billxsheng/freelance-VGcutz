@@ -7,11 +7,10 @@
 
 footer {
     background-color: bisque;
-    height: 150px;
+    height: 120px;
     border-bottom-left-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
     box-shadow:  0 0 25px #ccc;
-
 }
 
 .directory a, .directory a:visited {

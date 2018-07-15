@@ -1,9 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     templateUrl: './booking.component.html',
-    styles: ['./booking.component.css']
+    styleUrls: ['./booking.component.css']
 })
-export class BookingComponent {
-    
+export class BookingComponent implements OnInit {
+    ngOnInit() {
+        window.scroll(0,0);
+    }
 }

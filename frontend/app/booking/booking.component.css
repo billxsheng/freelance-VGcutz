@@ -1,0 +1,10 @@
+* {
+    font-family: 'Lilita One'
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 70px;
+}
