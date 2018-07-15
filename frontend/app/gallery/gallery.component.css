@@ -11,6 +11,8 @@ h1 {
 
 .gallery-container {
     background-color: white;
+    box-shadow: 0 0 25px #ccc;
+
 }
 
 .jumbotron {

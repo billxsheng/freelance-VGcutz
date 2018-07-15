@@ -13,10 +13,11 @@ h1 {
     position: relative;
     top: 30px;
     font-size: 70px;
+    color: white;
 }
 
 .hero {
-    height: 80vh;
+    height: auto;
     margin-bottom: 0 !important;
     
 }

@@ -1,7 +1,6 @@
 * {
     font-family: 'Lilita One';
     color: black;
-    background-color: white;
 }
 
 .contact-container {
@@ -11,14 +10,20 @@
 
 .title {
     color: black;
-    height: 500px;
-    background-image: url(http://localhost:8080/frontend/assets/photos/background.png);
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87),#fff), url(http://localhost:8080/frontend/assets/photos/barber.jpg);
     background-size: cover;
+
+}
+
+.col-md-12, .col-md-6 {
+    top: -200px;
 }
 
 .jumbotron {
+    background-image: linear-gradient(to bottom,#fff, rgba(255, 255, 255, 0.781)), url(http://localhost:8080/frontend/assets/photos/tools.png);
     background-color: transparent !important;
-    height: auto;
+    height: 900px;
     margin-bottom: 0 !important;
 }
 
@@ -88,7 +93,10 @@ a {
 .medias {
     width: 70%;
     margin: 0 auto;
+    background-color: transparent;
 }
+
+
 
 @media (max-width: 991px) {
     h3 {

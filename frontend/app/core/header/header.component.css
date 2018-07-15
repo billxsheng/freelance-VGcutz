@@ -17,11 +17,15 @@
     min-height: 80px;
 }
 
+
 .navbar-nav>li>a {
     padding-top: 0px;
     padding-bottom: 0px;
     line-height: 80px;
 }
+
+
+
 
 .navbar-nav li {
     margin-right: 0rem;
@@ -31,7 +35,7 @@
     background-color: transparent !important;
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
-    
+    height: 110px;
 }
 
 nav a {

@@ -11,6 +11,8 @@ h1 {
 
 .pricing-container {
     background-color: white !important;
+    box-shadow: 0 0 25px #ccc;
+
 }
 
 .jumbotron {
