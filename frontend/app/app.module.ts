@@ -9,6 +9,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BookingComponent } from './booking/booking.component';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 
 
@@ -20,6 +22,7 @@ import { BookingComponent } from './booking/booking.component';
         ContactComponent,
         GalleryComponent,
         BookingComponent
+
     ],
     imports: [
         BrowserModule,

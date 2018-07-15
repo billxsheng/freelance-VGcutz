@@ -4,14 +4,14 @@
 }
 
 .controller {
-    height: 200vh;
+    height: auto;
     margin: 30px !important;
     border-radius: 15px !important;
-    background: linear-gradient(to bottom right, rgb(36, 36, 100), rgb(32, 19, 48)) !important;
+    background: linear-gradient(to bottom right, rgb(31, 31, 150), rgb(28, 6, 54)) !important;
 }
 
 @media (max-width: 991px) {
-    .jumbotron {
+    .controller {
         height: 150vh;
         margin: 0px !important;
         border-radius: 0px !important;

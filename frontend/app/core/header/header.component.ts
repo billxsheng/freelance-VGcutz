@@ -15,7 +15,7 @@ export class HeaderComponent   {
     scrollNav: JQuery = $('nav-scroll');
 
     height: Number = this.primaryNav.height();
-    console.log(height);
+    
     
     
 }

@@ -1,35 +1,68 @@
-<body>
+<body class="component">
     <div class='hero jumbotron'>
         <div class="main">
             <div class="col-md-4">
                 <h1>vCutz</h1>
             </div>
-            <div class='col=md-8'>
+            <div class='col-md-8'>
                 <img src="">
             </div>
         </div>
     </div>
-    <div class="options jumbotron">
-        <div class="col-sm-3">
-            <h2>Gallery</h2>
-            <p>See my work!</p>
-            <i class="fas fa-image"></i>
-        </div>
-        <div class="col-sm-3">
-            <h2>Pricing</h2>
-            <p>$$$</p>
-            <i class="fas fa-dollar-sign"></i>
-        </div>
-        <div class="col-sm-3">
-            <h2>Booking</h2>
-            <p>Make an appointment!</p>
-            <i class="fas fa-calendar-check"></i>
+    <div class="options container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <a routerLink='gallery'>
+                    <div class="options-content">
+                        <h2>Gallery</h2>
+                        <p></p>
+                        <i class="fas fa-image"></i>
+                        <hr class="options-div-hr">
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col-md-3">
+                <a routerLink='pricing'>
+                    <div class="options-content">
+                        <h2>Pricing</h2>
+                        <p></p>
+                        <i class="fas fa-dollar-sign"></i>
+                        <hr class="options-div-hr">
+                    </div>
+                </a>
+            </div>
+
+
+            <div class=" col-md-3">
+                <a routerLink='booking'>
+                    <div class="options-content">
+                        <h2>Booking</h2>
+                        <p></p>
+                        <i class="fas fa-calendar-check"></i>
+                        <hr class="options-div-hr">
+                    </div>
+                </a>
+
+            </div>
+
+            <div class=" col-md-3">
+                <a routerLink='contact'>
+                    <div class=" options-content">
+                        <h2>Contact</h2>
+                        <p></p>
+                        <i class="fas fa-thumbs-up"></i>
+                        <hr class="options-div-hr">
+                    </div>
+                </a>
+            </div>
+
 
         </div>
-        <div class="col-sm-3">
-            <h2>Contact</h2>
-            <p>Get in touch!</p>
-            <i class="fas fa-thumbs-up"></i>
-        </div>
+
     </div>
+
+
 </body>

@@ -1,5 +1,6 @@
 * {
-    font-family: 'Bungee Inline' !important;
+    font-family: 'Lilita One'!important;
+    font-size: 20px;
 }
 
 
@@ -43,6 +44,7 @@ nav a {
     background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
+    display: none;
     
 }
 
