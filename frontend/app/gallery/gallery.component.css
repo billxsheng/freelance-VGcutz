@@ -8,3 +8,13 @@ h1 {
     top: 30px;
     font-size: 70px;
 }
+
+.gallery-container {
+    background-color: white;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+    margin-bottom: 0 !important;
+
+}

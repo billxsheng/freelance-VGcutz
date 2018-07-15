@@ -8,6 +8,13 @@
     background-color: transparent;
 }
 
+h1 {
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 70px;
+}
+
 .hero {
     height: 80vh;
     margin-bottom: 0 !important;

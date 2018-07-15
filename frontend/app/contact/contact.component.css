@@ -11,6 +11,9 @@
 
 .title {
     color: black;
+    height: 500px;
+    background-image: url(http://localhost:8080/frontend/assets/photos/background.png);
+    background-size: cover;
 }
 
 .jumbotron {
@@ -21,7 +24,7 @@
 
 .content-arrow{
     background: linear-gradient(to bottom right, rgb(31, 31, 150), rgb(28, 6, 54)) !important;
-    width: 30%;
+    width: 80px;
     height: 80px;
     margin: 0 auto;
     position: relative;
@@ -52,13 +55,15 @@ h1 {
     position: relative;
     top: 30px;
     font-size: 70px;
+    background-color: transparent;
+
 }
 
 .contact-content, .contact-content:visited, .contact-content-bookonline, .contact-content-bookonline:visited {
     background-color: white;
     padding: 20px 0;
-    margin: 20px auto 100px auto;
-    width: 300px;
+    margin: 20px auto 100px;
+    width: 80%;
     text-align: center;
     height: 200px;
     border-radius: 15px;
@@ -66,7 +71,7 @@ h1 {
 }
 
 .contact-content-bookonline {
-    width: 800px;
+    width: 90%;
 }
 
 .contact-content-click:hover {
@@ -83,4 +88,11 @@ a {
 .medias {
     width: 70%;
     margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    h3 {
+        font-size: 20px;
+    }
+    
 }

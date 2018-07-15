@@ -8,3 +8,13 @@ h1 {
     top: 30px;
     font-size: 70px;
 }
+
+.pricing-container {
+    background-color: white !important;
+}
+
+.jumbotron {
+    background-color: transparent;
+    margin-bottom: 0 !important;
+
+}
