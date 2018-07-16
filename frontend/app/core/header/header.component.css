@@ -6,7 +6,7 @@
 
 
 .nav-primary {
-   
+   transition: background 300ms ease-in;
 }
 
 .navbar-brand {
@@ -24,7 +24,11 @@
     line-height: 80px;
 }
 
-
+.loaded {
+    background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
 
 
 .navbar-nav li {
@@ -33,7 +37,7 @@
 
 .navbar {
     background-color: transparent !important;
-    border-top-left-radius: 15px !important;
+    border-top-left-radius: 15px ;
     border-top-right-radius: 15px !important;
     height: 110px;
 }
@@ -46,13 +50,6 @@ nav a {
     max-height: 80px !important;
 }
 
-.nav-scroll {
-    background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
-    display: none;
-    
-}
 
 @media (max-width: 991px) {
     .navbar-nav>li>a {
@@ -67,7 +64,4 @@ nav a {
     
     }
 
-    .navbar-toggler {
-        
-    }
 }

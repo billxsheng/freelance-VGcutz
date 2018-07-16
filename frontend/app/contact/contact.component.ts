@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ContactComponent implements OnInit {
     ngOnInit() {
-        window.scroll(0,0);
+        window.scrollTo(0,0);
     }
 
 }

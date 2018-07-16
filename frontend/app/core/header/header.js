@@ -1,23 +1,22 @@
-$(document).ready(function() {
-    var primaryNav = $('.nav-primary');
-    var scrollNav = $('.nav-scroll');
-    
-    var waypoint = new Waypoint({
-        element: primaryNav,
-        handler: function(direction) {
-          toggleNav();
-        }
+$(document).ready(function () {
+  $(this).scrollTop(0);
+  var primaryNav = $('.nav-primary');
 
-      })
+  new Waypoint({
+    element: primaryNav,
+    handler: function (direction) {
+      toggleNav();
+    }
+
+  }, {
+    offset: '8px'
+  })
 
 
-    function toggleNav() {
-        primaryNav.toggle('display');
-        scrollNav.toggle('display');
+  function toggleNav() {
+    primaryNav.toggleClass(['navbar-dark', 'navbar-light', 'bg-dark', 'bg-light', 'loaded'])
 
-       
-
-};
+  };
 
 
 
