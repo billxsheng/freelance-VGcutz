@@ -5,9 +5,6 @@
 }
 
 
-.nav-primary {
-   transition: background 300ms ease-in;
-}
 
 .navbar-brand {
     margin-left: 1rem !important;
@@ -26,19 +23,20 @@
 
 .loaded {
     background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
+    opacity: 1;
 }
 
+.scroll-hidden {
+    transform: translate3d(0, -100%, 0) !important;
+}
 
 .navbar-nav li {
     margin-right: 0rem;
 }
 
-.navbar {
+.nav-primary {
     background-color: transparent !important;
-    border-top-left-radius: 15px ;
-    border-top-right-radius: 15px !important;
+    transition: all 300ms ease ;
     height: 110px;
 }
 
@@ -58,10 +56,5 @@ nav a {
         padding-bottom: 10px;
     }
 
-    .navbar {
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0px !important;
-    
-    }
 
 }
