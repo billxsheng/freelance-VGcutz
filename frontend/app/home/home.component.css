@@ -49,6 +49,8 @@ p {
     width: 100%;
     position: relative;
     top: 70px;
+    box-shadow:  0 0 15px #ccc;
+
 }
 
 .options-content * {

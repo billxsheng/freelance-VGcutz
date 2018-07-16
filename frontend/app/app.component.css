@@ -7,15 +7,12 @@
     height: auto;
     margin: 30px !important;
     border-radius: 15px !important;
-    background: linear-gradient(to bottom right, rgb(31, 31, 150), rgb(28, 6, 54)) !important;
+    background: linear-gradient(to bottom right, rgb(9, 9, 99), rgb(18, 11, 119)) !important;
 }
-
-
-
 
 @media (max-width: 991px) {
     .controller {
-        height: 150vh;
+        height: auto;
         margin: 0px !important;
         border-radius: 0px !important;
     }

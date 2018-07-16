@@ -6,6 +6,7 @@ import { Component, AfterViewInit } from "@angular/core";
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent   {
     constructor() {
 
@@ -13,6 +14,7 @@ export class HeaderComponent   {
 
     primaryNav: JQuery = $('nav-primary');
     scrollNav: JQuery = $('nav-scroll');
+
 
     height: Number = this.primaryNav.height();
     

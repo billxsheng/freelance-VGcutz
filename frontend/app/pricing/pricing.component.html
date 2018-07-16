@@ -3,8 +3,32 @@
             <h1 [ngStyle] = "{'color':'black'}" >PRICING</h1>    
     </div>
     <div class="jumbotron pricing">
-        
+        <div class="col-md-12 text-center pricing-content">
+            <h3>Signature Fade</h3>
+            <i class="fas fa-cut"></i>
+            <h3>$15</h3>
+            <button class="btn btn-primary details-btn" data-toggle="modal" data-target="#sigModal">Details</button>
+        </div>
     </div>
+
+    <div class="modal fade" id="sigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Signature Fade</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Details go here.
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-primary details-btn">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 

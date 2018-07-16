@@ -12,11 +12,44 @@ h1 {
 .pricing-container {
     background-color: white !important;
     box-shadow: 0 0 25px #ccc;
+}
 
+.pricing * {
+    padding: 10px;
+}
+
+.details-btn {
+    background: linear-gradient(to bottom right, rgb(9, 9, 99), rgb(18, 11, 119)) !important;
+}
+
+.pricing i {
+    font-size: 40px;
+}
+
+.pricing-content a {
+    padding: 20px 0 0 0 !important;
+}
+
+.pricing-content {
+    box-shadow: 0 0 15px #ccc;
+    width: 250px;
+    margin: 0 auto;
+    height: 300px;
 }
 
 .jumbotron {
     background-color: transparent;
     margin-bottom: 0 !important;
+}
 
+@media (max-width: 991px) {
+    .pricing-container {
+        height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .pricing-content {
+        margin: 30px auto 20px;
+    }
 }
