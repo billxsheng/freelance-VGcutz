@@ -1,0 +1,19 @@
+.map-component {
+    background-color: aliceblue;
+    height: 700px;
+}
+
+agm-map {
+    height: 400px;
+    width: 700px;
+    margin: 0 auto !important;
+    border-radius: 15px !important;
+}
+
+.map {
+    height: 400px;
+    width: 700px;
+    margin: auto auto;
+    position: relative;
+    top: 200px;
+}

@@ -45,10 +45,14 @@
     background-color: black;
     height: 110px;
     position: fixed;
-    top: -110px !important;
+    top: -500px !important;
     display: none;
 }
 
+.nav-mobile-content {
+    height: 500px !important;
+    background-color: black !important;
+}
 
 
 
@@ -68,7 +72,7 @@ nav a {
 
 
 .load-nav-content {
-    transform: translate3d(0, 100%, 0) !important;
+    transform: translate3d(0, 300%, 0) !important;
 }
 
 
