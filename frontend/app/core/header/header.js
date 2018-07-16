@@ -3,19 +3,25 @@ $(document).ready(function () {
   var primaryNav = $('.nav-primary');
   var mobileNav = $('.nav-mobile');
   var mobileNavActivateBtn = $('.nav-mobile-btn');
-  var waypoint = $('.container-waypoint');
   var mobileNavLinks = $('.nav-link-mobile')
   var scroll = 0;
 
 
-  $(function () {
-    new Waypoint({
-      element: waypoint,
+
+    var navWaypoint = new Waypoint({
+      element: $('.container-waypoint'),
       handler: function (direction) {
         toggleNav();
       }, offset: 109
     })
-  })
+
+    // var waypoint = new Waypoint({
+    //   element: $elem,
+    //   handler: function(dir) { 
+    //     // Code
+    //   }
+    // });
+
 
   $(function () {
     mobileNavActivateBtn.on('click', function () {
@@ -25,9 +31,9 @@ $(document).ready(function () {
   });
   $(function () {
     $(window).on('scroll', function () {
-      primaryNav.toggleClass('scroll-hidden', $(window).scrollTop() > scroll);
+      primaryNav.toggleClass('scroll-hidden', ($(window).scrollTop()) > scroll);
       //if second parameter is true, class is added, else removed
-      scroll = $(window).scrollTop();
+      scroll = ($(window).scrollTop());
     })
   });
 

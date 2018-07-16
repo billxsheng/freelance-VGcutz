@@ -15,5 +15,11 @@ agm-map {
     width: 700px;
     margin: auto auto;
     position: relative;
-    top: 200px;
+    top: 130px;
+    border-radius: 15px;
+}
+
+.address {
+    position: relative;
+    top: 100px;
 }

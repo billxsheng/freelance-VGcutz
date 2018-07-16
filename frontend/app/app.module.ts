@@ -9,8 +9,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BookingComponent } from './booking/booking.component';
-import { MapComponent } from './home/map/map.component';
 import {AgmCoreModule} from '@agm/core'
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -22,7 +22,6 @@ import {AgmCoreModule} from '@agm/core'
         ContactComponent,
         GalleryComponent,
         BookingComponent,
-        MapComponent
 
     ],
     imports: [
@@ -31,7 +30,8 @@ import {AgmCoreModule} from '@agm/core'
         CoreModule,
         AgmCoreModule.forRoot({
             apiKey:'AIzaSyA8FzTmvGjGcKsFyaM_zqG9BXgpHFvl18E'
-        })
+        }),
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -34,15 +34,19 @@
     margin-right: 0rem;
 }
 
-.nav-primary, .nav-mobile-content {
+.nav-primary {
     background-color: transparent !important;
+
+}
+
+.nav-primary, .nav-mobile-content {
     transition: all 300ms ease ;
     height: 110px;
 }
 
 .nav-mobile {
     transition: all 300ms ease;
-    background-color: black;
+    background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
     height: 110px;
     position: fixed;
     top: -500px !important;
@@ -51,20 +55,11 @@
 
 .nav-mobile-content {
     height: 500px !important;
-    background-color: black !important;
 }
-
-
-
-
-
 
 nav a {
     cursor: pointer;
 }
-
-
-
 
 .logo {
     max-height: 80px !important;
@@ -98,6 +93,8 @@ nav a {
 .nav-mobile-btn {
     height: 100px;
     width: 100vw;
+    border-radius: 0 !important;
+
 }
 
 }
