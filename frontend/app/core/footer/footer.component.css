@@ -16,18 +16,17 @@ footer {
 .btn-social a {
     color: black;
     display: inline-block;
-    margin: 0 5px;
+    margin: 30px 5px 0;
     position: relative;
     cursor: pointer;
 }
 
 footer div {
-    padding: 10px 0;
 }
 
 .copyright {
     position: relative;
-    top: 15px;
+    top: 25px;
 }
 
 

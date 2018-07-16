@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from "@angular/core";
+import { Component, AfterViewInit, ElementRef } from "@angular/core";
 
 
 @Component({
@@ -12,11 +12,9 @@ export class HeaderComponent   {
 
     }
 
-    primaryNav: JQuery = $('nav-primary');
-    scrollNav: JQuery = $('nav-scroll');
 
 
-    height: Number = this.primaryNav.height();
+
     
     
     
