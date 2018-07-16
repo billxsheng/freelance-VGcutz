@@ -4,7 +4,7 @@
 .jumbotron {
     background-color: transparent;
 }
-.component{
+.home-container{
     background-color: transparent;
 }
 
@@ -99,3 +99,9 @@ i {
 .fa-image {
     color: rgb(145, 196, 245);
 }
+
+@media (max-width: 480px) {
+    .home-container {
+        margin-top: 80px;
+    }
+    }
