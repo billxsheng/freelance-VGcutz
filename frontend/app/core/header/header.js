@@ -9,18 +9,11 @@ $(document).ready(function () {
 
 
     var navWaypoint = new Waypoint({
-      element: $('.container-waypoint'),
-      handler: function (direction) {
+      element: document.getElementsByClassName('container-waypoint'),
+      handler: function () {
         toggleNav();
       }, offset: 109
     })
-
-    // var waypoint = new Waypoint({
-    //   element: $elem,
-    //   handler: function(dir) { 
-    //     // Code
-    //   }
-    // });
 
 
   $(function () {

@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BookingComponent } from './booking/booking.component';
 import { SharedModule } from './shared/shared.module';
+import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component';
 
 
 
@@ -21,7 +22,7 @@ import { SharedModule } from './shared/shared.module';
         ContactComponent,
         GalleryComponent,
         BookingComponent,
-
+        GalleryListComponent
     ],
     imports: [
         BrowserModule,
