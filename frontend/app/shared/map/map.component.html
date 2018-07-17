@@ -1,11 +1,11 @@
 <div class="map-component">
         <div class="container">
-                <h2 class="text-center address">Fall 2018: Sunview Street & University Street West</h2>
+                <h2 class="text-center address">Fall 2018 <br> <span class="address-p" >Sunview Street & University Street West</span></h2>
 
         </div>
         <div class="map">
-                <agm-map [latitude]="latitude" [longitude]="longitude">
-                        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+                <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="15"  [gestureHandling]="'cooperative'" >
+                        <agm-marker [latitude]="latitude" [longitude]="longitude"  ></agm-marker>
                 </agm-map>
 
         </div>

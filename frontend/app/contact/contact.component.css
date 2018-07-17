@@ -4,30 +4,32 @@
 }
 
 .contact-container {
-    box-shadow:  0 0 15px #ccc;
+    box-shadow: 0 0 15px #ccc;
     margin-bottom: 0;
 }
 
 .title {
     color: black;
     height: 300px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87),#fff), url(http://localhost:8080/frontend/assets/photos/barber.jpg);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87), #fff), url(http://localhost:8080/frontend/assets/photos/barber.jpg);
     background-size: cover;
-
 }
 
-.col-md-12, .col-md-6 {
+.col-md-12,
+.col-md-6 {
     top: -200px;
 }
 
 .jumbotron {
-    background-image: linear-gradient(to bottom,#fff, rgba(255, 255, 255, 0.781)), url(http://localhost:8080/frontend/assets/photos/tools.png);
+    background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.863)), url(http://localhost:8080/frontend/assets/photos/tools.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: transparent !important;
-    height: 900px;
+    height: auto;
     margin-bottom: 0 !important;
 }
 
-.content-arrow{
+.content-arrow {
     background: linear-gradient(to bottom right, rgb(31, 31, 150), rgb(28, 6, 54)) !important;
     width: 80px;
     height: 80px;
@@ -61,10 +63,12 @@ h1 {
     top: 30px;
     font-size: 70px;
     background-color: transparent;
-
 }
 
-.contact-content, .contact-content:visited, .contact-content-bookonline, .contact-content-bookonline:visited {
+.contact-content,
+.contact-content:visited,
+.contact-content-bookonline,
+.contact-content-bookonline:visited {
     background-color: white;
     padding: 20px 0;
     margin: 20px auto 100px;
@@ -89,33 +93,36 @@ a {
     text-decoration: none !important;
 }
 
-
 .medias {
     width: 70%;
     margin: 0 auto;
     background-color: transparent;
+    height: 800px;
 }
-
-
 
 @media (max-width: 991px) {
     h3 {
         font-size: 20px;
     }
-
-    
 }
 
-@media (max-width: 764px) {
+@media (max-width: 768px) {
     .jumbotron {
-        height: 1500px;
+        height: auto;
         padding-bottom: 0;
     }
-    
+
+    .medias {
+        height: auto;
+        margin-bottom: -220px;
+    }
 }
 
 @media (max-width: 480px) {
-.contact-container {
-    margin-top: 100px;
-}
+    .contact-container {
+        margin-top: 100px;
+    }
+    .contact-content-bookonline {
+        width: 170px;
+    } 
 }

@@ -1,11 +1,14 @@
 * {
     font-family: 'Lilita One'
 }
+
 .jumbotron {
     background-color: transparent;
 }
-.home-container{
-    background-color: transparent;
+
+.home-container {
+    height: auto;
+    box-shadow: 0 0 25px #ccc;
 }
 
 h1 {
@@ -17,9 +20,9 @@ h1 {
 }
 
 .hero {
+    background-color: transparent;
     height: auto;
     margin-bottom: 0 !important;
-    
 }
 
 p {
@@ -27,19 +30,13 @@ p {
 }
 
 .options {
-    height: 400px !important;
     background-color: white;
-    
-}
-
-.options-container {
-    background-color: white;
-    box-shadow:  0 0 25px #ccc;
 }
 
 
 
-.options a, .options a:visited {
+.options a,
+.options a:visited {
     display: inline-block !important;
     text-align: center;
     background-color: white;
@@ -48,9 +45,8 @@ p {
     color: black;
     width: 100%;
     position: relative;
-    top: 70px;
-    box-shadow:  0 0 15px #ccc;
-
+    margin: 60px auto 100px;
+    box-shadow: 0 0 15px #ccc;
 }
 
 .options-content * {
@@ -58,16 +54,11 @@ p {
     top: 50px;
 }
 
-
-
-
-
-
 .options a:hover {
     text-decoration: none;
     transform: translate(0, -10px) scale(1.05);
     transition: all 150ms ease-in;
-    box-shadow:  0 0 15px #ccc;
+    box-shadow: 0 0 15px #ccc;
 }
 
 .options-div-hr {
@@ -104,4 +95,14 @@ i {
     .home-container {
         margin-top: 80px;
     }
+
+}
+
+@media (max-width: 765px) {
+    .options a,
+    .options a:visited {
+        margin: 20px auto 30px ;
+    
     }
+}
+
