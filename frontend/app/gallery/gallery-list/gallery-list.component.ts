@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { GalleryItem } from "../gallery-item.model";
 
 @Component({
     selector: 'gallery-list-component',
@@ -7,5 +8,11 @@ import { Component } from "@angular/core";
 })
 
 export class GalleryListComponent {
+    galleryItems: GalleryItem[] = [
+        new GalleryItem('fade', 'fade', '')
+    ];
 
+    constructor () {
+
+    }
 }

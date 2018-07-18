@@ -11,6 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { BookingComponent } from './booking/booking.component';
 import { SharedModule } from './shared/shared.module';
 import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component';
+import { GalleryModule } from './gallery/gallery.module';
 
 
 
@@ -20,15 +21,14 @@ import { GalleryListComponent } from './gallery/gallery-list/gallery-list.compon
         HomeComponent,
         PricingComponent,
         ContactComponent,
-        GalleryComponent,
-        BookingComponent,
-        GalleryListComponent
+        BookingComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         CoreModule,
-        SharedModule
+        SharedModule,
+        GalleryModule
     ],
     providers: [],
     bootstrap: [AppComponent]

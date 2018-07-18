@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 
  var waypoint = new Waypoint({
-    element: $('.container-waypoint')[0], 
+    element: $('.container-waypoint'), 
     handler: function () {
       toggleNav();
     }, offset:   -1

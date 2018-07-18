@@ -5,7 +5,9 @@ import { GalleryComponent } from "./gallery.component";
 
 @NgModule({
     imports: [
-        RouterModule.forChild([{path: '', component: GalleryComponent }])
+        RouterModule.forChild([{path: '', component: GalleryComponent , children: [
+            
+        ]}])
     ],
     exports: [
         RouterModule
