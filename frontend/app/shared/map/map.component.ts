@@ -9,5 +9,8 @@ import { Component } from "@angular/core";
 export class MapComponent {
     latitude =  43.473178;
     longitude = -80.532913;
+    address: String = 'Sunview Street & University Street West';
+    time: String = 'Fall 2018'
+
 
 }

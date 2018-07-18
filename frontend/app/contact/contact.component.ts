@@ -9,4 +9,8 @@ export class ContactComponent implements OnInit {
         window.scrollTo(0,0);
     }
 
+    personalIG: String = '@varoongupta';
+    businessIG: string = '@vgcutz';
+    mobile: String = '647-795-4303';
+
 }

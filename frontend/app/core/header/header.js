@@ -7,13 +7,14 @@ $(document).ready(function () {
   var scroll = 0;
 
 
+ var waypoint = new Waypoint({
+    element: $('.container-waypoint')[0], 
+    handler: function () {
+      toggleNav();
+    }, offset:   -1
+  });
 
-    var navWaypoint = new Waypoint({
-      element: document.getElementsByClassName('container-waypoint'),
-      handler: function () {
-        toggleNav();
-      }, offset: 109
-    })
+  
 
 
   $(function () {

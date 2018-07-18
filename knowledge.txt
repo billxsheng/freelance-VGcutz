@@ -1,0 +1,14 @@
+angular.js
+
+Property binding // event binding // String interpolation 
+
+two way data binding - [(ngModel)] = “typescriptVar” —> {{typescriptVar}}
+
+*ngIf = "boolean expression"  (* for structural directives)
+*ngIf = "" else noServer   <ng-template #noServer> 
+
+[ngStyle] = "{'color': 'red'}"  
+[ngStyle] = "{'color': getColor()}"  --> typescript return something
+[ngClass] = "{css class name: boolean}" if true, class is attached
+*ngFor = "let variable of typescriptVar"
+*ngFor = "let variable of typescriptVar; let i = index"

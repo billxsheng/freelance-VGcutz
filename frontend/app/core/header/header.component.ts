@@ -7,15 +7,17 @@ import { Component, AfterViewInit, ElementRef } from "@angular/core";
     styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent   {
-    constructor() {
+export class HeaderComponent {
 
+    constructor() {
+        //called when component created
     }
 
 
 
 
-    
-    
-    
+
+
+
+
 }
