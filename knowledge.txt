@@ -12,3 +12,17 @@ two way data binding - [(ngModel)] = “typescriptVar” —> {{typescriptVar}}
 [ngClass] = "{css class name: boolean}" if true, class is attached
 *ngFor = "let variable of typescriptVar"
 *ngFor = "let variable of typescriptVar; let i = index"
+
+custom property  html --> serverElement   [element] (defined in child) = "serverElement" typescript --> @input('alias') element() (viewable from parent component)
+
+event binding custom (customEvent) = "parentMethod(event)"   typescript--> parentMethod(event) {}  child typescript --> @output (passing events outside of component) customEvent = new eventemitter<{$event data}>  onChildMethod  this.customEvent.emit(@event data)
+
+component --> viewencapsulation.none for when css is universal
+
+local reference --> # (template only such as passing data or $event) typescript --> method(input: htmlinputelement)
+
+@viewchild('selector || local reference') variable: elementref      typescript --> this.variable.nativelement.value  
+
+<ng-content> info is now projected from child template to parent template
+
+typescript --> @contentchild('content') variable: elementref

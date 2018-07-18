@@ -11,6 +11,7 @@ export class MapComponent {
     longitude = -80.532913;
     address: String = 'Sunview Street & University Street West';
     time: String = 'Fall 2018'
+    city: String = 'Waterloo, ON'
 
 
 }

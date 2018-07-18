@@ -9,7 +9,8 @@ import { GalleryItem } from "../gallery-item.model";
 
 export class GalleryListComponent {
     galleryItems: GalleryItem[] = [
-        new GalleryItem('fade', 'fade', '')
+        new GalleryItem('fade', 'fade', ''),
+        new GalleryItem('clean', 'clean',"")
     ];
 
     constructor () {
