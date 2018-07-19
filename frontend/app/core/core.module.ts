@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { HeaderComponent } from "./header/header.component";
 import { AppRoutingModule } from "../app-routing.module";
 import { FooterComponent } from "./footer/footer.component";
+import { GalleryService } from "../gallery/gallery.service";
 
 @NgModule({
     declarations: [
@@ -17,7 +18,7 @@ import { FooterComponent } from "./footer/footer.component";
         FooterComponent
     ],
     providers: [
-
+        GalleryService
     ]
 })
 export class CoreModule {

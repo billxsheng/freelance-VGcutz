@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { GalleryItem } from "../gallery-item.model";
+import { GalleryService } from "../gallery.service";
 
 @Component({
     selector: 'gallery-list-component',
@@ -7,13 +8,14 @@ import { GalleryItem } from "../gallery-item.model";
     styleUrls: ['./gallery-list.component.css']
 })
 
-export class GalleryListComponent {
-    galleryItems: GalleryItem[] = [
-        new GalleryItem('fade', 'fade', ''),
-        new GalleryItem('clean', 'clean',"")
-    ];
+export class GalleryListComponent implements OnInit {
+    galleryItems: GalleryItem[];
 
-    constructor () {
+    constructor (private galleryService: GalleryService) {
 
+    }
+
+    ngOnInit() {
+        this.galleryItems = this.galleryService.getGalleryItems();
     }
 }

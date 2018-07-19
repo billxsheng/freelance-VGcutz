@@ -27,8 +27,7 @@ import { GalleryModule } from './gallery/gallery.module';
         BrowserModule,
         AppRoutingModule,
         CoreModule,
-        SharedModule,
-        GalleryModule
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]

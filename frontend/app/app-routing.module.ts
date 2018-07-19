@@ -10,7 +10,7 @@ import { PricingComponent } from './pricing/pricing.component';
 const appRoutes: Routes = [
     {path: '', component:  HomeComponent},
     {path: 'booking', component: BookingComponent},
-    {path: 'gallery', component: GalleryComponent},
+    {path: 'gallery', loadChildren: './gallery/gallery.module#GalleryModule'},
     {path: 'contact', component: ContactComponent},
     {path: 'pricing', component: PricingComponent}
 ];

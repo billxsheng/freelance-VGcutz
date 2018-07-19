@@ -26,3 +26,44 @@ local reference --> # (template only such as passing data or $event) typescript 
 <ng-content> info is now projected from child template to parent template
 
 typescript --> @contentchild('content') variable: elementref
+
+
+new attribute directive (add to module to declarations + shared module)
+
+@directive({
+    selector:[],
+})
+export class directive  implements oninit{
+    constructor(private elementref: elementref,private renderer: renderer) {}
+    ngoninit() {this.renderer.setstyle(this.elementref.nativelement, 'color', 'green')}
+
+    @hostbinding('style.backgroundcolor') backgroundColor: string = transparent;
+
+    @hostlistener('mouseenter') mouseover(eventdata: event) {
+        this.renderer.setstyle(this.elementref.nativelement, 'color', 'blue');
+    }
+
+}
+
+new structural directive 
+@input() set unless(condition: boolean) {
+    if(!condition) {
+        this.vcref.createembeddedview(this.templateref);
+    } else {
+        this.vcref.clear
+    }
+
+    contructor(private templateref: templateref<any>, private vcref: viewconainerref) {
+
+    }
+}
+
+
+SERVICE (less repetition and data passing easy )
+export class Service {
+    logStatusChange(status: string) {
+        console.log(status);
+    }
+}
+
+to import service --> put into constructor of component (private service: Service) & add service to providors array
