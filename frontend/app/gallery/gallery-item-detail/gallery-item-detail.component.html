@@ -1,1 +1,5 @@
-<h1>yo</h1>
+<div class="container">
+    <h1>{{selectedItem.name}}</h1>
+    <p>{{selectedItem.description}}</p>
+    <img src="{{selectedItem.imagePath}}" alt="{{selectedItem.name}}" class="image-responsive" [ngStyle] = "{'max-height': '250px'}" >
+</div>
