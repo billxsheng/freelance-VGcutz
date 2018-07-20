@@ -39,7 +39,7 @@ $(document).ready(function () {
   })
 
   function toggleNav() {
-    primaryNav.toggleClass(['navbar-dark', 'navbar-light', 'bg-dark', 'bg-light', 'loaded', 'sticky-top'])
+    primaryNav.toggleClass([ 'loaded', 'sticky-top'])
 
   };
 

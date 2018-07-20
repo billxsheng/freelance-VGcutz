@@ -1,6 +1,9 @@
-.container * {
-    margin: 20px 0;
+.container a {
+    position: relative;
+    margin-bottom: 20px;
 }
-img {
-    
+
+.btn {
+   background:  linear-gradient(to bottom right, rgb(9, 9, 99), rgb(18, 11, 119)) !important;
+   color: white !important;
 }

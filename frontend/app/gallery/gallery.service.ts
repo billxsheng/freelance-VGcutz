@@ -3,10 +3,12 @@ import { GalleryItem } from "./gallery-item.model";
 export class GalleryService {
 
     private galleryItems: GalleryItem[] = [
-        new GalleryItem('fade', 'fade', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
-        new GalleryItem('clean', 'clean', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
-        new GalleryItem('clean', 'clean', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
-        new GalleryItem('clean', 'clean', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg")
+        new GalleryItem('Low Top Fade', 'Low top, short sides', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
+        new GalleryItem('High Top Fade', 'High top, short sides', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
+        new GalleryItem('Combover', 'Thickest of combovers', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg"),
+        new GalleryItem('Buzzcut', 'Special', "http://localhost:8080/frontend/assets/photos/gallery/monkey.jpg")
+       
+
 
     ];
 

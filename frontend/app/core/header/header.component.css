@@ -4,7 +4,9 @@
     
 }
 
-
+nav {
+    background: transparent;
+}
 
 .navbar-brand {
     margin-left: 1rem !important;
@@ -23,7 +25,6 @@
 
 .loaded {
     background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
-    opacity: 1;
 }
 
 .scroll-hidden {
@@ -35,8 +36,8 @@
 }
 
 .nav-primary {
-    background-color: transparent !important;
-
+    background: linear-gradient(to bottom, bisque,bisque);
+    color: #000;
 }
 
 .nav-primary, .nav-mobile-content {
