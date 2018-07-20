@@ -3,7 +3,48 @@
         <h1 [ngStyle]="{'color':'black'}">BOOKING</h1>
     </div>
     <div class="jumbotron booking">
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <form enctype="multipart/form-data"  action="/" >
+                    <div class="form-group">
+                        <label for = "firstName">First Name</label>
+                        <input type="text" id="firstName" class="form-control" autofocus autocomplete="off" >
+                    </div>
+                    <div class="form-group">
+                        <label for = "lastName">Last Name</label>
+                        <input type="text" id="lastName" class="form-control" autocomplete="off" >
+                    </div>
+                    <div class="form-group">
+                        <label for = "mobile">Mobile Number</label>
+                        <input type="number" id="mobile" class="form-control" autocomplete="off" >
+                    </div>
+                    <div class="form-group">
+                        <label for = "email">Email</label>
+                        <input type="email" id="email" class="form-control" autocomplete="off" >
+                    </div>
+                    <div class="form-group">
+                        <label for = "date">Date</label>
+                        <input type="date" id="date" class="form-control"  autocomplete="off" >
+                    </div>
+                    <div class="form-group ">
+                        <input class="form-control" type="text" placeholder="1 Hour Appointments" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for = "time">Time (h/m + AM/PM) </label>
+                        <input type="time" id="time" class="form-control" autocomplete="off" >
+                    </div>
+                    <div class="form-group ">
+                        <label for = "image">Add Image</label>
+                        <input type="file" id="image" class="form-control dropzone" accept="image/*" multiple />
+                    </div>
+                    <div class="form-group ">
+                        <label for = "notes">Additional Notes</label>
+                        <textarea type="text" id="notes" class="form-control" ></textarea>
+                    </div>
+                    <div class="btn btn-primary btn-submit float-right" type="submit">Submit</div>
+                </form>
+            </div>
+        </div>
     </div>
 
 

@@ -14,8 +14,6 @@ $(document).ready(function () {
     }, offset:   -1
   });
 
-  
-
 
   $(function () {
     mobileNavActivateBtn.on('click', function () {

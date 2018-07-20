@@ -38,3 +38,5 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+./frontend/assets/js/dropzone.js

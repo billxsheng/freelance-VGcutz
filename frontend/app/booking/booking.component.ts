@@ -8,4 +8,6 @@ export class BookingComponent implements OnInit {
     ngOnInit() {
         window.scroll(0,0);
     }
+
+    
 }
