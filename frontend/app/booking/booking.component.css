@@ -29,6 +29,16 @@ h1 {
     margin-right: auto;
 }
 
+input.ng-valid, textarea.ng-valid {
+    border: 3px solid rgb(0, 255, 0);
+}
+
+.no-border {
+    border: 3px dotted rgb(0, 153, 255) !important;
+}
+
+
+
 .btn-submit{
 
 }
