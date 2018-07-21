@@ -37,7 +37,7 @@ export class directive  implements oninit{
     constructor(private elementref: elementref,private renderer: renderer) {}
     ngoninit() {this.renderer.setstyle(this.elementref.nativelement, 'color', 'green')}
 
-    @hostbinding('style.backgroundcolor') backgroundColor: string = transparent;
+    @hostbinding('style.backgroundcolor') backgroundColor: string = transparent; //this.backgroundColor = green
 
     @hostlistener('mouseenter') mouseover(eventdata: event) {
         this.renderer.setstyle(this.elementref.nativelement, 'color', 'blue');

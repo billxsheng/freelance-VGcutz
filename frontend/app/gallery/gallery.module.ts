@@ -1,5 +1,5 @@
-import { NgModule } from "../../../node_modules/@angular/core";
-import { CommonModule } from "../../../node_modules/@angular/common";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { GalleryRoutingModule } from "./gallery-routing.module";
 import { GalleryComponent } from "./gallery.component";
 import { GalleryListComponent } from "./gallery-list/gallery-list.component";

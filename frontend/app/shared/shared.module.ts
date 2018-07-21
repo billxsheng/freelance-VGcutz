@@ -1,7 +1,8 @@
-import { NgModule } from "../../../node_modules/@angular/core";
+import { NgModule } from "@angular/core";
 import { MapComponent } from "./map/map.component";
-import { CommonModule } from "../../../node_modules/@angular/common";
-import { AgmCoreModule } from "../../../node_modules/@agm/core";
+import { CommonModule } from "@angular/common";
+import { AgmCoreModule } from "@agm/core";
+import { BackgroundMainDirective } from "./directives/background-main.directive";
 
 
 @NgModule({
@@ -13,11 +14,13 @@ import { AgmCoreModule } from "../../../node_modules/@agm/core";
         CommonModule
     ],
     declarations: [
-        MapComponent
+        MapComponent,
+        BackgroundMainDirective
     ],
     exports: [
     CommonModule,
-    MapComponent
+    MapComponent,
+    BackgroundMainDirective
     ]
 })
 export class SharedModule {

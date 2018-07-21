@@ -1,6 +1,6 @@
-import { Component, OnInit } from "../../../../node_modules/@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { GalleryService } from "../gallery.service";
-import { ActivatedRoute, Params } from "../../../../node_modules/@angular/router";
+import { ActivatedRoute, Params } from "@angular/router";
 import { GalleryItem } from "../gallery-item.model";
 
 @Component({
