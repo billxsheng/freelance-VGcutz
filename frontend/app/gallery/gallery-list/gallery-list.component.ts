@@ -15,6 +15,11 @@ export class GalleryListComponent implements OnInit {
 
     }
 
+    onPracticeClick(data: String) {
+        console.log('Event emitted by child class to parent HTML component. Parent method triggered.', data)
+    }
+    
+
     ngOnInit() {
         this.galleryItems = this.galleryService.getGalleryItems();
     }

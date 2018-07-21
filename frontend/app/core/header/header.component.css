@@ -36,7 +36,7 @@ nav {
 }
 
 .nav-primary {
-    background: linear-gradient(to bottom, bisque,bisque);
+    background-color: #ccc0ae !important;
     color: #000;
 }
 

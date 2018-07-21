@@ -15,7 +15,7 @@ two way data binding - [(ngModel)] = “typescriptVar” —> {{typescriptVar}}
 
 custom property  html --> serverElement   [element] (defined in child) = "serverElement" typescript --> @input('alias') element() (viewable from parent component)
 
-event binding custom (customEvent) = "parentMethod(event)"   typescript--> parentMethod(event) {}  child typescript --> @output (passing events outside of component) customEvent = new eventemitter<{$event data}>  onChildMethod  this.customEvent.emit(@event data)
+event occurs in child component and you want to inform parent component || event binding custom (customEvent) = "parentMethod(event)"   typescript--> parentMethod(event) {}  child typescript --> @output (passing events outside of component) customEvent = new eventemitter<{$event data}>  onChildMethod  this.customEvent.emit(@event data)
 
 component --> viewencapsulation.none for when css is universal
 

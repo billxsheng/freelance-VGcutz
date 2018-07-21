@@ -6,4 +6,6 @@ router.get('/', (req, res) => {
     res.render('index', {title: 'hello'});
 });
 
+router.post('/booking/submit')
+
 module.exports = router;

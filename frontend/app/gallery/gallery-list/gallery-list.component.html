@@ -1,3 +1,3 @@
 
-<gallery-list-item-component   *ngFor = "let galleryItemEl of galleryItems; let i = index"
+<gallery-list-item-component  (exampleAdded) = "onPracticeClick($event)" *ngFor = "let galleryItemEl of galleryItems; let i = index"
 [galleryItem] = galleryItemEl [index] = i ></gallery-list-item-component>

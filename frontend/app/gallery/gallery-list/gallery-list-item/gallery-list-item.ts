@@ -1,4 +1,4 @@
-import { Component, Input } from "../../../../../node_modules/@angular/core";
+import { Component, Input, EventEmitter, OnInit, Output } from "../../../../../node_modules/@angular/core";
 import { GalleryItem } from "../../gallery-item.model";
 
 @Component({
@@ -8,7 +8,11 @@ import { GalleryItem } from "../../gallery-item.model";
 })
 
 export class GalleryListItemComponent {
+    @Output()exampleAdded = new EventEmitter<String>();
     @Input() galleryItem: GalleryItem;
     @Input() index: Number;
 
+    emitExampleEvent() {
+        this.exampleAdded.emit(this.galleryItem.name);
+    }
 }

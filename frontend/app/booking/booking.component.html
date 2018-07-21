@@ -5,51 +5,54 @@
     <div class="jumbotron booking">
         <div class="container">
             <div class="row justify-content-center">
-                <form [formGroup] = "bookingForm" enctype="multipart/form-data"  action="/" (ngSubmit) = "onSubmit()" >
+                <form [formGroup] = "bookingForm" enctype="multipart/form-data"  action="/booking/submit" method="POST" (ngSubmit) = "onSubmit()" >
                     <div class="form-group">
-                        <label for = "firstName">First Name</label>
+                        <label  for = "firstName">*First Name</label>
                         <input type="text" id="firstName" class="form-control" autofocus autocomplete="off" formControlName = "firstName" >
                     </div>
                     <div class="form-group" *ngIf = "!bookingForm.get('firstName').valid && bookingForm.get('firstName').touched " >
-                        <div class="alert alert-danger">This field is required.</div>
+                        <div class="alert alert-danger" >{{req}}</div>
                     </div>
                     <div class="form-group">
-                        <label for = "lastName">Last Name</label>
+                        <label for = "lastName">*Last Name</label>
                         <input type="text" id="lastName" class="form-control" autocomplete="off" formControlName = "lastName" >
                     </div>
                     <div class="form-group" *ngIf = "!bookingForm.get('lastName').valid && bookingForm.get('lastName').touched ">
-                        <div class="alert alert-danger">This field is required.</div>
+                        <div class="alert alert-danger">{{req}}</div>
                     </div>
                     <div class="form-group">
-                        <label for = "mobile">Mobile Number</label>
+                        <label for = "mobile">*Mobile Number</label>
                         <input type="number"  id="mobile" class="form-control" autocomplete="off" formControlName = "mobile" >
                     </div>
                     <div class="form-group" *ngIf = "!bookingForm.get('mobile').valid && bookingForm.get('mobile').touched ">
-                        <div class="alert alert-danger">This field is required.</div>
+                        <div class="alert alert-danger">{{req}}</div>
                     </div>
                     <div class="form-group" >
-                        <label for = "email">Email</label>
+                        <label for = "email">*Email</label>
                         <input type="email" id="email" class="form-control" autocomplete="off" formControlName = "email" >
                     </div>
                     <div class="form-group" *ngIf = "!bookingForm.get('email').valid && bookingForm.get('email').touched ">
-                        <div class="alert alert-danger">Please enter a valid email.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for = "date">Date</label>
-                        <input type="date" id="date" class="form-control"  autocomplete="off" formControlName = "date" >
-                    </div>
-                    <div class="form-group" *ngIf = "!bookingForm.get('date').valid && bookingForm.get('date').touched ">
-                        <div class="alert alert-danger">Please schedule a valid date.</div>
+                        <div class="alert alert-danger">{{emailReq}}</div>
                     </div>
                     <div class="form-group ">
-                        <input class="form-control" type="text" placeholder="~1 Hour Appointments" readonly>
+                        <input class="form-control" type="text" placeholder="Please note that these are preferred dates/times. I will follow up to confirm a final time." readonly>
                     </div>
                     <div class="form-group">
-                        <label for = "time">Time (h/m + AM/PM) </label>
-                        <input type="time" id="time" class="form-control" autocomplete="off" formControlName = "time" >
+                        <label for = "date">*Preferred Date</label>
+                        <input type="date"  min="{{currentDate}}" id="date" class="form-control datepicker"  autocomplete="off" formControlName = "date" >
+                    </div>
+                    <div class="form-group" *ngIf = "!bookingForm.get('date').valid && bookingForm.get('date').touched ">
+                        <div class="alert alert-danger">{{dateReq}}</div>
+                    </div>
+                    <div class="form-group ">
+                        <input class="form-control" type="text" placeholder="~1 Hour Appointments between 11AM and 12PM" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for = "time">* Preferred Time </label>
+                        <input type="time"  min="11:00" max="24:00" id="time" class="form-control" autocomplete="off" formControlName = "time" >
                     </div>
                     <div class="form-group" *ngIf = "!bookingForm.get('time').valid && bookingForm.get('time').touched ">
-                        <div class="alert alert-danger">Please schedule a valid time.</div>
+                        <div class="alert alert-danger">{{timeReq}}</div>
                     </div>
                     <div class="form-group ">
                         <label for = "image">Add Image</label>

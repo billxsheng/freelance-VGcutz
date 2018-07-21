@@ -10,7 +10,7 @@
 .title {
     color: black;
     height: 300px;
-    background-image: linear-gradient(to bottom,rgb(255, 255, 255), rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 1) ), url(http://localhost:8080/frontend/assets/photos/barber.jpg);
+    /* background-image: linear-gradient(to bottom,rgb(255, 255, 255), rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 1) ), url(http://localhost:8080/frontend/assets/photos/barber.jpg); */
     background-size: cover;
 }
 
@@ -22,8 +22,10 @@ hr {
     width: 50%;
 }
 
+
+
 .jumbotron {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url(http://localhost:8080/frontend/assets/photos/tools.png);
+    /* background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url(http://localhost:8080/frontend/assets/photos/tools.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent !important;
