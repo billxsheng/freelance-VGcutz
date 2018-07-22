@@ -53,7 +53,7 @@ new structural directive
         this.vcref.clear
     }
 
-    contructor(private templateref: templateref<any>, private vcref: viewconainerref) {
+    contructor(private templateref: templateref<any>, private vcref: viewcontainerref) {
 
     }
 }

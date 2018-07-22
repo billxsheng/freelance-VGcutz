@@ -1,0 +1,12 @@
+.list-group-item {
+    height: 100px;
+    color: black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.list-group-item.active {
+    color: black;
+    background-color: bisque;
+    border: none;
+}

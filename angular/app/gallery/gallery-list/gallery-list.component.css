@@ -1,0 +1,10 @@
+div {
+    display: inline-block;
+}
+
+.btn-toggle {
+    cursor: pointer;
+    font-size: 40px;
+    top: -184px;
+    position: relative;
+}

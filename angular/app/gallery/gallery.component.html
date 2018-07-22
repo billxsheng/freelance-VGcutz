@@ -1,0 +1,16 @@
+<div class="gallery-container" backgroundmain>
+    <div class="container title">
+        <h1 [ngStyle]="{'color':'black'}">GALLERY</h1>
+    </div>
+    
+    <div class="row gallery">
+        <div class="col-md-5 jumbotron-list">
+            <gallery-list-component></gallery-list-component>
+        </div>
+        <div class="col-md-7  text-center">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+
+</div>

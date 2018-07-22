@@ -1,0 +1,12 @@
+<div class="col-md-1">
+    <a class="toggle-left" ><i class="fas fa-chevron-circle-left btn-toggle"></i></a>
+</div>
+<div class="col-md-10">
+    <gallery-list-item-component (exampleAdded)="onPracticeClick($event)" *ngFor="let galleryItemEl of galleryItems; let i = index"
+        [galleryItem]=galleryItemEl [index]=i></gallery-list-item-component>
+        
+</div>
+
+<div class="col-md-1">
+    <a class="toggle-right"><i class="fas fa-chevron-circle-right btn-toggle"></i></a>
+</div>
