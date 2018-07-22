@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www",
-    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --port 8080 --progress --profile --watch",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js  --progress --profile --watch",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'angular/app/**/*.js' 'angular/app/**/*.ngsummary.json' 'angular/app/**/*.ngstyle.*'",
     "serve": "lite-server"
   },
