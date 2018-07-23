@@ -3,22 +3,18 @@ export class Form {
     public lastName: string;
     public email: string;
     public mobile: number;
-    public date: string;
-    public time: string;
-
-
-
-
-    public name: string;
-    public description: string;
     public imagePath: string;
+    public message: string;
     
    
 
-    constructor(name: string, desc: string, image: string) {
-        this.name = name;
-        this.description = desc;
-        this.imagePath = image;
+    constructor(firstName: string, lastName: string, email: string, mobile:number, imagePath: string, message: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.mobile = mobile;
+        this.imagePath = imagePath;
+        this.message = message;
     }
 }
 

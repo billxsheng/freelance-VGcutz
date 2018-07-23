@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { BookingComponent } from './booking/booking.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { PricingComponent } from './pricing/pricing.component';
 
 
 const appRoutes: Routes = [
     {path: '', component:  HomeComponent},
-    {path: 'booking', component: BookingComponent},
+    {path: 'booking', loadChildren: './booking/booking.module#BookingModule'},
     {path: 'gallery', loadChildren: './gallery/gallery.module#GalleryModule'},
     {path: 'contact', component: ContactComponent},
     {path: 'pricing', component: PricingComponent}

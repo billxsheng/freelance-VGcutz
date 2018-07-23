@@ -1,0 +1,53 @@
+* {
+    font-family: 'Lilita One'
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 70px;
+}
+
+form {
+    width: 70%;
+}
+.booking-container {
+
+}
+
+
+.jumbotron {
+    background-color: transparent;
+    margin-bottom: 0 !important;
+}
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input.ng-valid, textarea.ng-valid {
+    border: 3px solid rgb(0, 255, 0);
+}
+
+.no-border {
+    border: 3px dotted rgb(0, 153, 255) !important;
+}
+
+
+
+.btn-submit{
+
+}
+
+@media (max-width: 480px) {
+    .booking-container {
+        margin-top: 100px;
+    }
+    }

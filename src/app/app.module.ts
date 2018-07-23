@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 
@@ -19,14 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
         HomeComponent,
         PricingComponent,
         ContactComponent,
-        BookingComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         CoreModule,
         SharedModule,
-        ReactiveFormsModule,
         HttpClientModule
     ],
     providers: [],

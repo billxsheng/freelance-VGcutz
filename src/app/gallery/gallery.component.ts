@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { GalleryService } from "./gallery.service";
 
 @Component({
     templateUrl: './gallery.component.html',
