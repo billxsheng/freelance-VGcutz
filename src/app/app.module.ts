@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,9 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppRoutingModule,
         CoreModule,
         SharedModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
 import {FormGroup, FormControl, Validators, ValidatorFn} from '@angular/forms';
 import {Http} from '@angular/http';
+import { BookingService } from "./booking.service";
 @Component({
     templateUrl: './booking.component.html',
     styleUrls: ['./booking.component.css']
@@ -30,9 +31,13 @@ export class BookingComponent implements OnInit  {
         });
     }
 
+    constructor(private bookingService : BookingService) {}
+
+
 
     onSubmit() {
         console.log(this.bookingForm);
+       // this.bookingService.postForm(this.bookingForm);
     }
 
 
