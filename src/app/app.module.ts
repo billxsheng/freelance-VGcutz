@@ -6,10 +6,9 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
-import { BookingComponent } from './booking/booking.component';
 import { SharedModule } from './shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+
 
 
 

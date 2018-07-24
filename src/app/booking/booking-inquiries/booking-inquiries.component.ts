@@ -40,7 +40,7 @@ export class BookingInquiriesComponent implements OnInit {
 
     onSubmit() {
         console.log(this.bookingForm);
-       // this.bookingService.postForm(this.bookingForm);
+         this.bookingService.postForm(this.bookingForm);
     }
 
 

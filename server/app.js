@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 
+var app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -17,8 +19,6 @@ app.use((req, res, next) => {
     next();
   });
 
-var app = express();
-
 app.post('/booking/submit', (req, res) => {
     const form = req.body;
     console.log(form);
@@ -28,3 +28,4 @@ app.post('/booking/submit', (req, res) => {
 });
 
 module.exports = app;
+

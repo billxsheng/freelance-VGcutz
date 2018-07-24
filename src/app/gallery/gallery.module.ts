@@ -6,6 +6,7 @@ import { GalleryListComponent } from "./gallery-list/gallery-list.component";
 import { GalleryListItemComponent } from "./gallery-list/gallery-list-item/gallery-list-item";
 import { GalleryItemDetailComponent } from "./gallery-item-detail/gallery-item-detail.component";
 import { GalleryStartComponent } from "./gallery-start/gallery-start.component";
+import { HttpClientModule } from "../../../node_modules/@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { GalleryStartComponent } from "./gallery-start/gallery-start.component";
     ],
     imports: [
         CommonModule,
-        GalleryRoutingModule
+        GalleryRoutingModule,
+        HttpClientModule
     ],
     exports: [
 
