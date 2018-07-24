@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { GalleryItem } from "../gallery-item.model";
 import { GalleryService } from "../gallery.service";
+import { Subscription } from "../../../../node_modules/rxjs";
 
 @Component({
     selector: 'gallery-list-component',
@@ -8,8 +9,9 @@ import { GalleryService } from "../gallery.service";
     styleUrls: ['./gallery-list.component.css']
 })
 
-export class GalleryListComponent implements OnInit {
+export class GalleryListComponent implements OnInit, OnDestroy {
     galleryItems: GalleryItem[];
+    private galleryItemsSub: Subscription;
 
     constructor (private galleryService: GalleryService) {
 
@@ -21,6 +23,13 @@ export class GalleryListComponent implements OnInit {
     
 
     ngOnInit() {
-        this.galleryItems = this.galleryService.getGalleryItems();
+        this.galleryService.getGalleryItems();
+        this.galleryItemsSub = this.galleryService.getGalleryItemsUpdated().subscribe((galleryItems: GalleryItem[]) => {
+            this.galleryItems = galleryItems;
+        });
+    }
+
+    ngOnDestroy() {
+        this.galleryItemsSub.unsubscribe();
     }
 }
