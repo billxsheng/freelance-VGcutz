@@ -12,6 +12,7 @@ import { Subscription } from "../../../../node_modules/rxjs";
 export class GalleryListComponent implements OnInit, OnDestroy {
     galleryItems: GalleryItem[];
     private galleryItemsSub: Subscription;
+    isLoading = false;
 
     constructor (private galleryService: GalleryService) {
 
@@ -23,13 +24,15 @@ export class GalleryListComponent implements OnInit, OnDestroy {
     
 
     ngOnInit() {
+        this.isLoading = true;
         this.galleryService.getGalleryItems();
         this.galleryItemsSub = this.galleryService.getGalleryItemsUpdated().subscribe((galleryItems: GalleryItem[]) => {
+            this.isLoading = false;
             this.galleryItems = galleryItems;
         });
+
     }
 
     ngOnDestroy() {
-        this.galleryItemsSub.unsubscribe();
     }
 }

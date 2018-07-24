@@ -1,10 +1,35 @@
 div {
     display: inline-block;
+    width: 100%;
+}
+
+.container {
+    width: 100% !important;
 }
 
 .btn-toggle {
     cursor: pointer;
     font-size: 40px;
-    top: -184px;
+}
+
+mat-spinner {
+    left: 40%;
+    top: 15px;
+}
+
+.gallery div {
+    display: inline-block;
+    margin: 80px auto 60px;
+}
+
+h1 {
+    text-align: center;
     position: relative;
+    top: 30px;
+    font-size: 70px;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+    margin-bottom: 0 !important;
 }

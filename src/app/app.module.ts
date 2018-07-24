@@ -8,7 +8,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
-
+import { MatProgressSpinnerModule } from '@angular/material';
 
 
 
@@ -24,7 +24,9 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
         AppRoutingModule,
         CoreModule,
         SharedModule,
-        HttpClientModule
+        HttpClientModule,
+        MatProgressSpinnerModule,
+        
     ],
     providers: [],
     bootstrap: [AppComponent]

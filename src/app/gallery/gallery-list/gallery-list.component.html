@@ -1,12 +1,12 @@
-<div class="col-md-1">
-    <a class="toggle-left" ><i class="fas fa-chevron-circle-left btn-toggle"></i></a>
-</div>
-<div class="col-md-10">
-    <gallery-list-item-component (exampleAdded)="onPracticeClick($event)" *ngFor="let galleryItemEl of galleryItems; let i = index"
-        [galleryItem]=galleryItemEl [index]=i></gallery-list-item-component>
-        
-</div>
+<div class="gallery-list-container" backgroundmain>
+    <div class="container text-center">
+        <h1 [ngStyle]="{'color':'black;'}">GALLERY</h1>
+    </div>
+    <div class="jumbotron gallery">
+            <mat-spinner *ngIf="isLoading" mode="indeterminate"></mat-spinner>
+            <div *ngIf="!isLoading" class="wrapper">
+                <gallery-list-item-component (exampleAdded)="onPracticeClick($event)" *ngFor="let galleryItemEl of galleryItems; let i = index"
+                    [galleryItem]=galleryItemEl [index]=i></gallery-list-item-component>
+            </div>
+    </div>
 
-<div class="col-md-1">
-    <a class="toggle-right"><i class="fas fa-chevron-circle-right btn-toggle"></i></a>
-</div>

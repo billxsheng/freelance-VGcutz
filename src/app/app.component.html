@@ -1,8 +1,14 @@
-<html class="container-waypoint">
+<div class="loading-overlay" *ngIf="isLoading">
+        <mat-progress-spinner  mode="indeterminate"></mat-progress-spinner>
+        
+</div>
+
+<div class="container-waypoint" *ngIf="!isLoading" >
     <div class="controller ">
         <router-outlet>
             <app-header></app-header>
         </router-outlet>
         <app-footer></app-footer>
     </div>
-</html>
+</div>
+

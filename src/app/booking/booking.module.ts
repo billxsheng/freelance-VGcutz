@@ -5,7 +5,6 @@ import { CommonModule } from "../../../node_modules/@angular/common";
 import { BookingRoutingModule } from "./booking-routing.module";
 import { BookingStartComponent } from "./booking-start/booking-start.component";
 import { ReactiveFormsModule } from "../../../node_modules/@angular/forms";
-import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -16,9 +15,7 @@ import { HttpClientModule  } from '@angular/common/http';
     imports: [
         CommonModule,
         BookingRoutingModule,
-        ReactiveFormsModule,
-        HttpClientModule
-    ],
+        ReactiveFormsModule    ],
     exports: [
 
     ]

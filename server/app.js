@@ -30,40 +30,42 @@ app.post('/booking/submit', (req, res) => {
 });
 
 app.get('/gallery', (req, res) => {
-  const galleryItems = [];
-  GalleryItem.find({}, (err, item) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(item, 'hello');
-    }
-  });
-  // const galleryItems = [
-  //   {
-  //     name: 'Low Top Fade',
-  //     description:'Low top, short sides',
-  //     imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
-  //   },
-  //   {
-  //     name: 'High Top Fade',
-  //     description:'High top, short sides',
-  //     imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
-  //   },
-  //   {
-  //     name: 'Combover',
-  //     description:'To the side',
-  //     imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
-  //   },
-  //   {
-  //     name: 'Buzzcut',
-  //     description:'All gone',
-  //     imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+  // const galleryItems = [];
+  // GalleryItem.find({}, (err, item) => {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     console.log(item, 'hello');
   //   }
-  // ]
+  // });
+  const galleryItems = [
+    {
+      name: 'Low Top Fade',
+      description:'Low top, short sides',
+      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+    },
+    {
+      name: 'High Top Fade',
+      description:'High top, short sides',
+      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+    },
+    {
+      name: 'Combover',
+      description:'To the side',
+      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+    },
+    {
+      name: 'Buzzcut',
+      description:'All gone',
+      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+    }
+  ]
 
-  // res.status(201).json({
-  //   galleryItems: galleryItems
-  // })
+  res.status(201).json({
+    galleryItems: galleryItems
+  })
+
+ 
 })
 
 
