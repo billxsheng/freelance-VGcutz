@@ -24,8 +24,11 @@ export class GalleryService {
         return this.galleryItemsUpdated.asObservable();
     }
 
+    getItemUpdated(id) {
+        return this.galleryItemsUpdated[id].asObservable();
+    }
 
     getItem(id) {
-        return this.galleryItems[id];
+        return this.galleryItems[id];''
     }
 }

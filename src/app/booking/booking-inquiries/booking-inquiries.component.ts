@@ -1,6 +1,7 @@
 import { Component, OnInit } from "../../../../node_modules/@angular/core";
 import { FormGroup, FormControl, Validators } from "../../../../node_modules/@angular/forms";
 import { BookingService } from "../booking.service";
+import { Router, ActivatedRoute } from "../../../../node_modules/@angular/router";
 
 @Component({
     templateUrl:'booking-inquiries.component.html',
@@ -18,9 +19,16 @@ export class BookingInquiriesComponent implements OnInit {
     timeReq: string = 'Please schedule a valid time.';
     paymentTypes = ['Cash', 'eTransfer'];
     currentDate;
+    formSubmitted = false;
     now;
 
+
+
     ngOnInit() {
+        console.log(this.getQueryParams().submit === "success");
+        if(this.getQueryParams().submit === "success") {
+            this.formSubmitted =true;
+        }
         var now = new Date();
         now.setDate(now.getDate() + 14);
         window.scroll(0,0);
@@ -34,13 +42,18 @@ export class BookingInquiriesComponent implements OnInit {
         });
     }
 
-    constructor(private bookingService : BookingService) {}
+    constructor(private bookingService : BookingService, private router: Router, private route: ActivatedRoute) {}
 
 
+    getQueryParams() {
+        return this.route.snapshot.queryParams;
+    }
 
     onSubmit() {
         console.log(this.bookingForm);
          this.bookingService.postForm(this.bookingForm);
+         this.bookingForm.reset();
+         this.router.navigate(["/booking/inquiries"], {queryParams: {'submit': 'success'}});
     }
 
 

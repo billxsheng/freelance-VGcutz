@@ -42,22 +42,22 @@ app.get('/gallery', (req, res) => {
     {
       name: 'Low Top Fade',
       description:'Low top, short sides',
-      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
     },
     {
       name: 'High Top Fade',
       description:'High top, short sides',
-      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
     },
     {
       name: 'Combover',
       description:'To the side',
-      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
     },
     {
       name: 'Buzzcut',
       description:'All gone',
-      imagePath:"http://localhost:3000/frontend/assets/photos/gallery/monkey.jpg"
+      imagePath:"http://localhost/4200/src/assets/resources/julio.jpg"
     }
   ]
 

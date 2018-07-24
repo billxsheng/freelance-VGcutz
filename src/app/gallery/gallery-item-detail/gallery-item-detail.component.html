@@ -1,8 +1,13 @@
-<div class="container  text-center">
+<div class="col-md-1">
+        <a class="btn-prev btn btn-primary">Prev</a>
+    </div>
+<div class="col-md-10 container text-center">
     <h1>{{selectedItem.name}}</h1>
     <p>{{selectedItem.description}}</p>
     <a class="btn btn-primary">Book Haircut</a>
     <br>
     <img src="{{selectedItem.imagePath}}" alt="{{selectedItem.name}}" class="image-responsive" [ngStyle] = "{'max-height': '360px'}" >
-   
+</div>
+<div class="col-md-1">
+    <a [routerLink] = "[idNext]" class="btn-next btn btn-primary">Next</a>
 </div>
