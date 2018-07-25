@@ -25,6 +25,7 @@
     "@angular/router": "^6.0.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.2",
+    "circular": "^1.0.5",
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "jquery": "^3.3.1",

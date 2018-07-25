@@ -21,6 +21,7 @@ export class GalleryItemDetailComponent implements OnInit {
             this.galleryService.getItem(this.route.snapshot.params['id']);
             this.galleryService.getItemUpdated().subscribe((galleryItem) => {
                 this.selectedItem = galleryItem;
+                console.log(this.selectedItem);
             })
         });
 

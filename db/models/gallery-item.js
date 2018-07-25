@@ -8,3 +8,4 @@ var galleryItemSchema = new Schema({
 });
 
 var GalleryItem = module.statics = module.exports = mongoose.model('GalleryItem', galleryItemSchema);
+

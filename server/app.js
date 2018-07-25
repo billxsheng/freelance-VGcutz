@@ -30,77 +30,52 @@ app.post('/booking/submit', (req, res) => {
 });
 
 app.get('/gallery', (req, res) => {
-  // const galleryItems = [];
-  // GalleryItem.find({}, (err, item) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log(item, 'hello');
-  //   }
-  // });
-  const galleryItems = [
-    {
-      name: 'Low Top Fade',
-      description:'Low top, short sides',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'High Top Fade',
-      description:'High top, short sides',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Combover',
-      description:'To the side',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description:'All gone',
-      imagePath:"../../../assets/resources/julio.jpg"
+  GalleryItem.find({}, (err, items) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.status(201).json({
+        galleryItems: items
+      })
     }
-  ]
+  });
+  // const galleryItems = [
+  //   {
+  //     name: 'Low Top Fade',
+  //     description:'Low top, short sides',
+  //     imagePath:"../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'High Top Fade',
+  //     description:'High top, short sides',
+  //     imagePath:"../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'Combover',
+  //     description:'To the side',
+  //     imagePath:"../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'Buzzcut',
+  //     description:'All gone',
+  //     imagePath:"../../../assets/resources/julio.jpg"
+  //   }
+  // ]
 
-  res.status(201).json({
-    galleryItems: galleryItems
-  })
+
 })
 
 app.get('/gallery/:id', (req, res) => {
-  // const galleryItems = [];
-  // GalleryItem.find({}, (err, item) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log(item, 'hello');
-  //   }
-  // });
-  const galleryItems = [
-    {
-      name: 'Low Top Fade',
-      description:'Low top, short sides',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'High Top Fade',
-      description:'High top, short sides',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Combover',
-      description:'To the side',
-      imagePath:"../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description:'All gone',
-      imagePath:"../../../assets/resources/julio.jpg"
+  GalleryItem.find({}, (err, items) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(items[req.params.id]);
+      res.status(201).json({
+        galleryItems: items[req.params.id]
+      })
     }
-  ]
-
-  res.status(201).json({
-    galleryItem: galleryItems[req.params.id]
-  })
+  });
 })
 
 
