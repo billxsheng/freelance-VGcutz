@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, OnInit, Output } from "@angular/core";
+import { Component, Input, EventEmitter, Output } from "@angular/core";
 import { GalleryItem } from "../../gallery-item.model";
 
 @Component({

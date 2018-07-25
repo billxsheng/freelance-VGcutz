@@ -11,7 +11,7 @@ div {
 }
 
 mat-spinner {
-    left: 40%;
+    margin: 0 auto ;
     top: 15px;
 }
 

@@ -9,31 +9,30 @@ import { Subscription } from "../../../../node_modules/rxjs";
     styleUrls: ['./gallery-list.component.css']
 })
 
-export class GalleryListComponent implements OnInit, OnDestroy {
-    index;
-    galleryItems: GalleryItem[];
+export class GalleryListComponent implements OnInit {
+    galleryItems: GalleryItem[] = [];
     private galleryItemsSub: Subscription;
     isLoading = false;
-
+    length: Number;
     constructor (private galleryService: GalleryService) {
 
     }
-
+    
     onPracticeClick(data: String) {
         console.log('Event emitted by child class to parent HTML component. Parent method triggered.', data)
     }
     
-
     ngOnInit() {
         this.isLoading = true;
+        //get gallery items first then actions is emitted where it is listened in the line below
         this.galleryService.getGalleryItems();
-        this.galleryItemsSub = this.galleryService.getGalleryItemsUpdated().subscribe((galleryItems: GalleryItem[]) => {
+        this.galleryService.getGalleryItemsListener().subscribe((galleryItems: GalleryItem[]) => {
             this.isLoading = false;
             this.galleryItems = galleryItems;
+            this.length = galleryItems.length;
+            console.log(this.length);
         });
-
     }
 
-    ngOnDestroy() {
-    }
+
 }

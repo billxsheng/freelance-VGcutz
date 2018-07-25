@@ -1,7 +1,7 @@
 <div class="col-md-1">
-        <a class="btn-prev btn btn-primary">Prev</a>
+        <button [disabled] = "disablePrev" routerLink = "../{{prevId}}" class="btn-prev btn btn-primary">Prev</button>
     </div>
-<div class="col-md-10 container text-center">
+<div class="col-md-10 container text-center" *ngIf = "selectedItem">
     <h1>{{selectedItem.name}}</h1>
     <p>{{selectedItem.description}}</p>
     <a class="btn btn-primary">Book Haircut</a>
@@ -9,5 +9,5 @@
     <img src="{{selectedItem.imagePath}}" alt="{{selectedItem.name}}" class="image-responsive" [ngStyle] = "{'max-height': '360px'}" >
 </div>
 <div class="col-md-1">
-    <a [routerLink] = "[idNext]" class="btn-next btn btn-primary">Next</a>
+    <button [disabled] = "disableNext" routerLink = "../{{nextId}}" class="btn-next btn btn-primary">Next</button>
 </div>

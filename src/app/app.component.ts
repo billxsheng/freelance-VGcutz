@@ -15,34 +15,34 @@ import {
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    isLoading = true;
+    // isLoading = true;
 
-    constructor(private router: Router) {
-        router.events.subscribe((event: RouterEvent) => {
-            this.navigationInterceptor(event)
-        });
-    }
+    // constructor(private router: Router) {
+    //     router.events.subscribe((event: RouterEvent) => {
+    //         this.navigationInterceptor(event)
+    //     });
+    // }
 
 
-    navigationInterceptor(event: RouterEvent): void {
-        if (event instanceof NavigationStart) {
+    // navigationInterceptor(event: RouterEvent): void {
+    //     if (event instanceof NavigationStart) {
             
-            this.isLoading = true
-        }
-        if (event instanceof NavigationEnd) {
-            setTimeout(() => {
-                this.isLoading = false
+    //         this.isLoading = true
+    //     }
+    //     if (event instanceof NavigationEnd) {
+    //         setTimeout(() => {
+    //             this.isLoading = false
 
-            }, 200);
-        }
+    //         }, 150);
+    //     }
 
-        if(event instanceof NavigationCancel) {
-         this.isLoading = false
-        }
-        if (event instanceof NavigationError) {
-           this.isLoading = false
-        }
-    }
+    //     if(event instanceof NavigationCancel) {
+    //      this.isLoading = false
+    //     }
+    //     if (event instanceof NavigationError) {
+    //        this.isLoading = false
+    //     }
+    // }
 
     
 

@@ -42,30 +42,65 @@ app.get('/gallery', (req, res) => {
     {
       name: 'Low Top Fade',
       description:'Low top, short sides',
-      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
+      imagePath:"../../../assets/resources/julio.jpg"
     },
     {
       name: 'High Top Fade',
       description:'High top, short sides',
-      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
+      imagePath:"../../../assets/resources/julio.jpg"
     },
     {
       name: 'Combover',
       description:'To the side',
-      imagePath:"http://localhost:4200/src/assets/resources/julio.jpg"
+      imagePath:"../../../assets/resources/julio.jpg"
     },
     {
       name: 'Buzzcut',
       description:'All gone',
-      imagePath:"http://localhost/4200/src/assets/resources/julio.jpg"
+      imagePath:"../../../assets/resources/julio.jpg"
     }
   ]
 
   res.status(201).json({
     galleryItems: galleryItems
   })
+})
 
- 
+app.get('/gallery/:id', (req, res) => {
+  // const galleryItems = [];
+  // GalleryItem.find({}, (err, item) => {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     console.log(item, 'hello');
+  //   }
+  // });
+  const galleryItems = [
+    {
+      name: 'Low Top Fade',
+      description:'Low top, short sides',
+      imagePath:"../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'High Top Fade',
+      description:'High top, short sides',
+      imagePath:"../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Combover',
+      description:'To the side',
+      imagePath:"../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Buzzcut',
+      description:'All gone',
+      imagePath:"../../../assets/resources/julio.jpg"
+    }
+  ]
+
+  res.status(201).json({
+    galleryItem: galleryItems[req.params.id]
+  })
 })
 
 
