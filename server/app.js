@@ -1,14 +1,42 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const db = require('../db/mongoose');
-const GalleryItem = require('../db/models/gallery-item');
-
+const multer = require('multer');
+const send = require('./send');
 var app = express();
+var keys = require('./keys');
+var nodemailer = require('nodemailer');
+
+
+const MIME_TYPE_MAP = {
+  'image/png': 'png',
+  'image/jpeg': 'jpeg',
+  'image/jpg': 'jpeg'
+}
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    const isValid = MIME_TYPE_MAP[file.mimetype];
+    let error = new Error("Invalid mime type");
+    if (isValid) {
+      error = null;
+    }
+    cb(error, "server/images");
+  },
+  filename: (req, file, cb) => {
+    const name = file.originalname
+      .toLowerCase()
+      .split(" ")
+      .join("-");
+    const ext = MIME_TYPE_MAP[file.mimetype];
+    cb(null, name + "-" + Date.now() + "." + ext);
+  }
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -23,12 +51,42 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/booking/submit', (req, res) => {
+app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
+  const url = req.protocol + '://' + req.get('host');
+  console.log(url + '/server/images/' + req.file.filename);
   const form = req.body;
   console.log(form);
   res.status(201).json({
     message: 'Form successfully submitted'
   })
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: keys.keys.emailInfo.username,
+      pass: keys.keys.emailInfo.password,
+    }
+  });
+  var mailOptions = {
+    attachments: [
+      {
+        filename: req.file.filename,
+        path: __dirname + '/images/' + req.file.filename,
+    }
+    ],
+    from: keys.keys.emailInfo.username,
+    to: keys.keys.personalEmail.address,
+    subject: `Customer inquiry from ${req.body.firstName} ${req.body.lastName}.`,
+    text: `
+    Client Name: ${req.body.firstName} ${req.body.lastName}
+    Client Email: ${req.body.email}
+    Client Mobile: ${req.body.mobile}
+
+    ${req.body.message}
+    `
+  };
+
+  send.sendInquiry(mailOptions, transporter);
+
 });
 
 app.get('/gallery', (req, res) => {

@@ -7,11 +7,16 @@ export class BookingService {
     constructor(private http: HttpClient) {}
     
 
-    postForm(submittedForm) {
-        console.log('Posting inquiry.')
-        var formValue = submittedForm.value;
-        var form: Form = {firstName: formValue.firstName, lastName: formValue.lastName, email: formValue.email, mobile: formValue.mobile, imagePath: formValue.imagePath, message: formValue.message}; ;
-        this.http.post('http://localhost:3000/booking/submit', form).subscribe((responseData) => {
+    postForm(firstName: string, lastName: string, email: string, mobile: string, image: File, message: string) {
+        const formData = new FormData();
+        formData.append("firstName", firstName);
+        formData.append("lastName", lastName);
+        formData.append("email", email);
+        formData.append("mobile", mobile);
+        formData.append("image", image, email);
+        formData.append("message", message);
+        console.log(formData);
+        this.http.post('http://localhost:3000/booking/submit', formData).subscribe((responseData) => {
             console.log(responseData);
         })
     }

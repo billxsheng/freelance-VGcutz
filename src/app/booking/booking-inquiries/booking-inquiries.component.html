@@ -1,23 +1,23 @@
 <div backgroundmain class="booking-container">
-        <div class=" back">
-                <div routerLink='../' class="btn btn-primary">
-                    Return
-                </div>
-            </div>
+       
     <div class="container title">
-        <h1 [ngStyle]="{'color':'black'}" backgroundmain>INQUIRIES</h1>
+            <div class="col-md-1 back">
+                    <div routerLink='../' class="btn btn-primary">
+                        Return
+                    </div>
+            </div>
+        <h1 class="col-md-4" [ngStyle]="{'color':'black'}" backgroundmain>INQUIRIES</h1>
     </div>
     <div class="jumbotron booking">
         <div class="container">
-            <div *ngIf="formSubmitted" class="alert alert-success" role="alert">
+<!--             <div *ngIf="formSubmitted" class="alert alert-success" role="alert">
                 Submitted!
-            </div>
+            </div> -->
             <div class="row justify-content-center">
-
-                <form [formGroup]="bookingForm" enctype="multipart/form-data" action="/booking/submit" method="POST" (ngSubmit)="onSubmit()">
+                <form  [formGroup]="bookingForm" action="/booking/submit" method="POST" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label for="firstName">*First Name</label>
-                        <input type="text" id="firstName" class="form-control" autofocus autocomplete="off" formControlName="firstName">
+                        <input type="text" id="firstName" class="form-control" autocomplete="off" formControlName="firstName">
                     </div>
                     <div class="form-group" *ngIf="!bookingForm.get('firstName').valid && bookingForm.get('firstName').touched ">
                         <div class="alert alert-danger">{{req}}</div>
@@ -45,13 +45,16 @@
                     </div>
                     <div class="form-group ">
                         <label for="image">Add Image</label>
-                        <input type="file" id="image" class="form-control dropzone no-border" accept="image/*" multiple formControlName="image" />
+                        <input type="file"  id="image" class="form-control" accept="image/*" multiple  (change) = "onImageUpload($event)" />
+                         <div class="image-preview" *ngIf = "imagePreview != '' && imagePreview && noPreview === false">
+                             <img [src]="imagePreview">
+                         </div>
                     </div>
                     <div class="form-group ">
                         <label for="notes">Message</label>
                         <textarea type="text" id="notes" class="form-control no-border" formControlName="message"></textarea>
                     </div>
-                    <input [disabled]=b ookingForm.invalid class="btn btn-primary btn-submit float-right" value="Book" type="submit">
+                    <input [disabled]="bookingForm.invalid" class="btn btn-primary btn-submit float-right" value="Send" type="submit">
                 </form>
 
             </div>

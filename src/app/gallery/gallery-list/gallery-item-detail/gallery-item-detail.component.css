@@ -11,6 +11,13 @@
 .container {
     margin: 30px auto;
 }
+.btn-next {
+    margin-right: 50px;
+}
+
+.btn-prev {
+    margin-left: 50px;
+}
 
 div {
     display: inline-block;

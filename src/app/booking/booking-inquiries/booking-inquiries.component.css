@@ -6,20 +6,29 @@ h1 {
     text-align: center;
     position: relative;
     top: 30px;
+    margin: 0 auto;
     font-size: 70px;
 }
 
 form {
     width: 70%;
 }
-.booking-container {
-
-}
-
 
 .jumbotron {
     background-color: transparent;
     margin-bottom: 0 !important;
+}
+input[type="file"] {
+    
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.image-preview img {
+    height: 100%;
 }
 
 .dropzone {
@@ -38,12 +47,6 @@ input.ng-valid, textarea.ng-valid {
 
 .no-border {
     border: 3px dotted rgb(0, 153, 255) !important;
-}
-
-
-
-.btn-submit{
-
 }
 
 @media (max-width: 480px) {
