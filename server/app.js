@@ -6,79 +6,108 @@ const GalleryItem = require('../db/models/gallery-item');
 var app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PATCH, DELETE, OPTIONS"
-    );
-    next();
-  });
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+  next();
+});
 
 app.post('/booking/submit', (req, res) => {
-    const form = req.body;
-    console.log(form);
-    res.status(201).json({
-        message: 'Form successfully submitted'
-    })
+  const form = req.body;
+  console.log(form);
+  res.status(201).json({
+    message: 'Form successfully submitted'
+  })
 });
 
 app.get('/gallery', (req, res) => {
-  GalleryItem.find({}, (err, items) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.status(201).json({
-        galleryItems: items
-      })
-    }
-  });
-  // const galleryItems = [
-  //   {
-  //     name: 'Low Top Fade',
-  //     description:'Low top, short sides',
-  //     imagePath:"../../../assets/resources/julio.jpg"
-  //   },
-  //   {
-  //     name: 'High Top Fade',
-  //     description:'High top, short sides',
-  //     imagePath:"../../../assets/resources/julio.jpg"
-  //   },
-  //   {
-  //     name: 'Combover',
-  //     description:'To the side',
-  //     imagePath:"../../../assets/resources/julio.jpg"
-  //   },
-  //   {
-  //     name: 'Buzzcut',
-  //     description:'All gone',
-  //     imagePath:"../../../assets/resources/julio.jpg"
+  // GalleryItem.find({}, (err, items) => {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     res.status(201).json({
+  //       galleryItems: items
+  //     })
   //   }
-  // ]
+  // });
+  const galleryItems = [{
+      name: 'Low Top Fade',
+      description: 'Low top, short sides',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'High Top Fade',
+      description: 'High top, short sides',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Combover',
+      description: 'To the side',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Buzzcut',
+      description: 'All gone',
+      imagePath: "../../../assets/resources/julio.jpg"
+    }
+  ]
+  res.status(201).json({
+    galleryItems: galleryItems
+  })
 
 
 })
 
 app.get('/gallery/:id', (req, res) => {
-  GalleryItem.find({}, (err, items) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(items[req.params.id]);
-      res.status(201).json({
-        galleryItems: items[req.params.id]
-      })
+  // GalleryItem.find({}, (err, items) => {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     console.log(items[req.params.id]);
+  //     res.status(201).json({
+  //       galleryItems: items[req.params.id]
+  //     })
+  //   }
+  // });
+
+  const galleryItems = [{
+      name: 'Low Top Fade',
+      description: 'Low top, short sides',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'High Top Fade',
+      description: 'High top, short sides',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Combover',
+      description: 'To the side',
+      imagePath: "../../../assets/resources/julio.jpg"
+    },
+    {
+      name: 'Buzzcut',
+      description: 'All gone',
+      imagePath: "../../../assets/resources/julio.jpg"
     }
-  });
+  ]
+
+  res.status(201).json({
+    galleryItems: galleryItems[req.params.id]
+  })
 })
 
 
 
 module.exports = app;
-

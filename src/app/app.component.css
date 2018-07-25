@@ -7,6 +7,14 @@
     height: auto;
 }
 
+.loading-overlay {
+    position: fixed;
+    z-index: 99999999;
+    height: 400% !important;
+    width: 100%;
+    background-color: white;
+}
+
 mat-progress-spinner {
     display:block !important;
     margin: 0 auto !important;
