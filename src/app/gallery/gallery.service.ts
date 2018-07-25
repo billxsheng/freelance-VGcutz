@@ -29,8 +29,9 @@ export class GalleryService {
 
     getItem(id) {
         console.log('Getting selected item');
-        this.http.get<{galleryItem:GalleryItem}>('http://localhost:3000/gallery/' + id).subscribe((getData) => {
-            this.selectedItem = getData.galleryItem;
+        this.http.get<{galleryItems:GalleryItem}>('http://localhost:3000/gallery/' + id).subscribe((getData) => {
+            console.log(getData);
+            this.selectedItem = getData.galleryItems;
             this.selectedItemUpdated.next(this.selectedItem);
         });
     }
