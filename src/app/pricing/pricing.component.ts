@@ -11,7 +11,7 @@ export class PricingComponent implements OnInit {
     constructor () {
         this.turnOnBtn();
     }
-    
+
 
     turnOnBtn:Function = (() => {
         this.btnOn = true;
