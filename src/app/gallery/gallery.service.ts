@@ -21,9 +21,11 @@ export class GalleryService {
             //emits copy of gallery items after they are updated
             this.galleryItemsUpdated.next([...this.galleryItems]);
         });
+        console.log(1);
     }
 
     getGalleryItemsListener() {
+        console.log('Update listener');
         return this.galleryItemsUpdated.asObservable();
     }
     

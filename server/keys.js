@@ -4,7 +4,7 @@ var keys = {
         password: 'goosegoose1'
     },
     personalEmail: {
-        address: 'bxsheng@edu.uwaterloo.ca'
+        address: 'billxsheng@gmail.com'
     }
 }
 
