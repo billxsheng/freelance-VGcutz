@@ -5,8 +5,8 @@ const send = require('./send');
 var app = express();
 var keys = require('./keys');
 var nodemailer = require('nodemailer');
-var db = require('../db/mongoose');
-var GalleryItem = require('../db/models/gallery-item');
+//var db = require('../db/mongoose');
+//var GalleryItem = require('../db/models/gallery-item');
 
 const MIME_TYPE_MAP = {
   'image/png': 'png',
@@ -84,7 +84,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
     `
   };
 
-  send.sendInquiry(mailOptions, transporter);
+  //send.sendInquiry(mailOptions, transporter);
 
 });
 
