@@ -33,6 +33,4 @@ export class GalleryListComponent implements OnInit {
             console.log(this.length);
         });
     }
-
-
 }

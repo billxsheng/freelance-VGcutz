@@ -5,7 +5,8 @@ const send = require('./send');
 var app = express();
 var keys = require('./keys');
 var nodemailer = require('nodemailer');
-
+var db = require('../db/mongoose');
+var GalleryItem = require('../db/models/gallery-item');
 
 const MIME_TYPE_MAP = {
   'image/png': 'png',
@@ -52,8 +53,6 @@ app.use((req, res, next) => {
 });
 
 app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
-  const url = req.protocol + '://' + req.get('host');
-  console.log(url + '/server/images/' + req.file.filename);
   const form = req.body;
   console.log(form);
   res.status(201).json({
@@ -90,81 +89,81 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
 });
 
 app.get('/gallery', (req, res) => {
-  // GalleryItem.find({}, (err, items) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     res.status(201).json({
-  //       galleryItems: items
-  //     })
-  //   }
-  // });
-  const galleryItems = [{
-      name: 'Low Top Fade',
-      description: 'Low top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'High Top Fade',
-      description: 'High top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Combover',
-      description: 'To the side',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description: 'All gone',
-      imagePath: "../../../assets/resources/julio.jpg"
+  console.log('yeet');
+  GalleryItem.find({}, (err, items) => {
+    console.log('starts');
+    if (err) {
+      console.log(err);
+    } else {
+      res.status(201).json({
+        galleryItems: items
+      })
     }
-  ]
-  res.status(201).json({
-    galleryItems: galleryItems
-  })
-
-
+  });
+  // const galleryItems = [{
+  //     name: 'Low Top Fade',
+  //     description: 'Low top, short sides',
+  //     imagePath: "../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'High Top Fade',
+  //     description: 'High top, short sides',
+  //     imagePath: "../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'Combover',
+  //     description: 'To the side',
+  //     imagePath: "../../../assets/resources/julio.jpg"
+  //   },
+  //   {
+  //     name: 'Buzzcut',
+  //     description: 'All gone',
+  //     imagePath: "../../../assets/resources/julio.jpg"
+  //   }
+  // ]
+  // res.status(201).json({
+  //   galleryItems: galleryItems
+  // })
 })
 
 app.get('/gallery/:id', (req, res) => {
-  // GalleryItem.find({}, (err, items) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log(items[req.params.id]);
-  //     res.status(201).json({
-  //       galleryItems: items[req.params.id]
-  //     })
-  //   }
-  // });
-
-  const galleryItems = [{
-      name: 'Low Top Fade',
-      description: 'Low top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'High Top Fade',
-      description: 'High top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Combover',
-      description: 'To the side',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description: 'All gone',
-      imagePath: "../../../assets/resources/julio.jpg"
+  GalleryItem.find({}, (err, items) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(items[req.params.id]);
+      res.status(201).json({
+        galleryItems: items[req.params.id]
+      })
     }
-  ]
+  });
 
-  res.status(201).json({
-    galleryItems: galleryItems[req.params.id]
-  })
-})
+//   const galleryItems = [{
+//       name: 'Low Top Fade',
+//       description: 'Low top, short sides',
+//       imagePath: "../../../assets/resources/julio.jpg"
+//     },
+//     {
+//       name: 'High Top Fade',
+//       description: 'High top, short sides',
+//       imagePath: "../../../assets/resources/julio.jpg"
+//     },
+//     {
+//       name: 'Combover',
+//       description: 'To the side',
+//       imagePath: "../../../assets/resources/julio.jpg"
+//     },
+//     {
+//       name: 'Buzzcut',
+//       description: 'All gone',
+//       imagePath: "../../../assets/resources/julio.jpg"
+//     }
+//   ]
+
+//   res.status(201).json({
+//     galleryItems: galleryItems[req.params.id]
+//   })
+ })
 
 
 

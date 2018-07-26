@@ -36,7 +36,7 @@ export class BookingInquiriesComponent implements OnInit {
             'mobile': new FormControl(null, [Validators.required, this.phoneLengthValidator.bind(this)]),
             'email': new FormControl(null, [Validators.required, Validators.email]),
             'image': new FormControl(null),
-            'message': new FormControl(null)
+            'message': new FormControl(null, [Validators.required])
         });
     }
 
@@ -49,22 +49,18 @@ export class BookingInquiriesComponent implements OnInit {
         }
         this.bookingForm.patchValue({ image: file });
         this.bookingForm.get('image').updateValueAndValidity();
-        console.log(file);
-        console.log(this.bookingForm);
         const reader = new FileReader();
         reader.onload = () => {
             this.imagePreview = reader.result;
         };
         reader.readAsDataURL(file);
-
-
     }
 
     onSubmit() {
         console.log(this.bookingForm);
         this.bookingService.postForm(this.bookingForm.value.firstName, this.bookingForm.value.lastName, this.bookingForm.value.email, this.bookingForm.value.mobile, this.bookingForm.value.image, this.bookingForm.value.message);
         this.bookingForm.reset();
-        this.router.navigate(["/booking/inquiries"], { queryParams: { 'submit': 'success' } });
+        this.router.navigate(["/booking/inquiries/success"]);
     }
 
 

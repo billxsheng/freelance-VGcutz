@@ -10,14 +10,11 @@
     </div>
     <div class="jumbotron booking">
         <div class="container">
-<!--             <div *ngIf="formSubmitted" class="alert alert-success" role="alert">
-                Submitted!
-            </div> -->
             <div class="row justify-content-center">
                 <form  [formGroup]="bookingForm" action="/booking/submit" method="POST" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label for="firstName">*First Name</label>
-                        <input type="text" id="firstName" class="form-control" autocomplete="off" formControlName="firstName">
+                        <input type="text" id="firstName" class="form-control"  formControlName="firstName">
                     </div>
                     <div class="form-group" *ngIf="!bookingForm.get('firstName').valid && bookingForm.get('firstName').touched ">
                         <div class="alert alert-danger">{{req}}</div>
@@ -31,28 +28,28 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile">*Mobile Number</label>
-                        <input type="number" id="mobile" class="form-control" autocomplete="off" formControlName="mobile">
+                        <input type="number" id="mobile" class="form-control"  autocomplete="off"  formControlName="mobile">
                     </div>
                     <div class="form-group" *ngIf="!bookingForm.get('mobile').valid && bookingForm.get('mobile').touched ">
                         <div class="alert alert-danger">{{req}}</div>
                     </div>
                     <div class="form-group">
                         <label for="email">*Email</label>
-                        <input type="email" id="email" class="form-control" autocomplete="off" formControlName="email">
+                        <input type="email" id="email" class="form-control" autocomplete="off"  formControlName="email">
                     </div>
                     <div class="form-group" *ngIf="!bookingForm.get('email').valid && bookingForm.get('email').touched ">
                         <div class="alert alert-danger">{{emailReq}}</div>
                     </div>
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label for="image">Add Image</label>
-                        <input type="file"  id="image" class="form-control" accept="image/*" multiple  (change) = "onImageUpload($event)" />
+                        <input type="file"  id="image" autocomplete="off" class="form-control no-border" accept="image/*" multiple  (change) = "onImageUpload($event)" />
                          <div class="image-preview" *ngIf = "imagePreview != '' && imagePreview && noPreview === false">
                              <img [src]="imagePreview">
                          </div>
                     </div>
                     <div class="form-group ">
                         <label for="notes">Message</label>
-                        <textarea type="text" id="notes" class="form-control no-border" formControlName="message"></textarea>
+                        <textarea type="text" id="notes" autocomplete="off" class="form-control" formControlName="message"></textarea>
                     </div>
                     <input [disabled]="bookingForm.invalid" class="btn btn-primary btn-submit float-right" value="Send" type="submit">
                 </form>
