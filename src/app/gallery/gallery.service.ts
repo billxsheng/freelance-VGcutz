@@ -26,7 +26,7 @@ export class GalleryService {
     getGalleryItemsListener() {
         return this.galleryItemsUpdated.asObservable();
     }
-
+    
     getItem(id) {
         console.log('Getting selected item');
         this.http.get<{galleryItems:GalleryItem}>('http://localhost:3000/gallery/' + id).subscribe((getData) => {
