@@ -27,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         SharedModule,
         HttpClientModule,
         MatProgressSpinnerModule,
-        //BrowserAnimationsModule
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

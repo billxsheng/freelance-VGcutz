@@ -6,7 +6,7 @@ import { mimeType } from "./mime-type.validator";
 
 @Component({
     templateUrl: 'booking-inquiries.component.html',
-    styleUrls: ['booking-inquiries.component.css']
+    styleUrls: ['booking-inquiries.component.css'],
 })
 
 export class BookingInquiriesComponent implements OnInit {

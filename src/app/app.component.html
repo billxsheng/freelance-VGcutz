@@ -1,15 +1,18 @@
 <div class="loading-overlay" *ngIf="isLoading">
-        <mat-progress-spinner  mode="indeterminate"yep
-        ></mat-progress-spinner>
-        
+    <mat-progress-spinner mode="indeterminate" yep></mat-progress-spinner>
+
 </div>
 
-<div class="container-waypoint" >
-    <div class="controller">
+<div class="container-waypoint">
+    <app-header></app-header>
+
+    <div class="router-outlet-outer" [@main-router] >
         <router-outlet>
-            <app-header></app-header>
         </router-outlet>
-        <app-footer></app-footer>
     </div>
-</div>
 
+
+
+
+    <app-footer></app-footer>
+</div>
