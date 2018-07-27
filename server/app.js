@@ -65,26 +65,44 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
       pass: keys.keys.emailInfo.password,
     }
   });
-  var mailOptions = {
-    attachments: [
-      {
-        filename: req.file.filename,
-        path: __dirname + '/images/' + req.file.filename,
-    }
-    ],
-    from: keys.keys.emailInfo.username,
-    to: keys.keys.personalEmail.address,
-    subject: `Customer inquiry from ${req.body.firstName} ${req.body.lastName}.`,
-    text: `
-    Client Name: ${req.body.firstName} ${req.body.lastName}
-    Client Email: ${req.body.email}
-    Client Mobile: ${req.body.mobile}
+  if(req.file.filename !== undefined) {
+    var mailOptions = {
+      attachments: [
+        {
+          filename: req.file.filename,
+          path: __dirname + '/images/' + req.file.filename,
+      }
+      ],
+      from: keys.keys.emailInfo.username,
+      to: keys.keys.personalEmail.address,
+      subject: `Customer inquiry from ${req.body.firstName} ${req.body.lastName}.`,
+      text: `
+      Client Name: ${req.body.firstName} ${req.body.lastName}
+      Client Email: ${req.body.email}
+      Client Mobile: ${req.body.mobile}
+  
+      ${req.body.message}
+      `
+    };
+    send.sendInquiry(mailOptions, transporter);
+  } else {
+    var mailOptions = {
+      from: keys.keys.emailInfo.username,
+      to: keys.keys.personalEmail.address,
+      subject: `Customer inquiry from ${req.body.firstName} ${req.body.lastName}.`,
+      text: `
+      Client Name: ${req.body.firstName} ${req.body.lastName}
+      Client Email: ${req.body.email}
+      Client Mobile: ${req.body.mobile}
+  
+      ${req.body.message}
+      `
+    };
+    send.sendInquiry(mailOptions, transporter);
+  }
+  
 
-    ${req.body.message}
-    `
-  };
-
-  //send.sendInquiry(mailOptions, transporter);
+  
 
 });
 
