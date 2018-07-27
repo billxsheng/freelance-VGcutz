@@ -1,10 +1,11 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "../../../node_modules/@angular/core";
 import { Form } from "./form.model";
+import { Router } from "../../../node_modules/@angular/router";
 
 @Injectable()
 export class BookingService {
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private router: Router ) {}
     
 
     postForm(firstName: string, lastName: string, email: string, mobile: string, image: File, message: string) {
@@ -18,6 +19,11 @@ export class BookingService {
         console.log(formData);
         this.http.post('http://localhost:3000/booking/submit', formData).subscribe((responseData) => {
             console.log(responseData);
+            // if(responseData.message === "success") {
+            //     this.router.navigate(["/booking/inquiries/success"]);
+            // } else {
+//
+            // }
         })
     }
 

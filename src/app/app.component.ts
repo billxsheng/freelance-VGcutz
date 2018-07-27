@@ -15,21 +15,21 @@ import { trigger, state, transition, style, animate } from '../../node_modules/@
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    animations:[
-        trigger('main-router', [
-            state('in', style({
-                opacity: 1
-            })),
-            transition('void => *', [
-                style({opacity: 0}),
-                animate(150)
-            ]),
-            transition('* => void', [
-                style({opacity: 0}),
-                animate(150)
-            ])
-        ])
-    ]
+    // animations:[
+    //     trigger('main-router', [
+    //         state('in', style({
+    //             opacity: 1
+    //         })),
+    //         transition('void => *', [
+    //             style({opacity: 0}),
+    //             animate(150)
+    //         ]),
+    //         transition('* => void', [
+    //             style({opacity: 0}),
+    //             animate(150)
+    //         ])
+    //     ])
+    // ]
 })
 export class AppComponent {
 

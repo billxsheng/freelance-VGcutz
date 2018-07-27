@@ -25,7 +25,7 @@ export class BookingInquiriesComponent implements OnInit {
     noPreview: Boolean = false;
 
 
-    constructor(private bookingService: BookingService, private router: Router, private route: ActivatedRoute) { }
+    constructor(private bookingService: BookingService, private route: ActivatedRoute) { }
 
     ngOnInit() {
         var now = new Date();
@@ -36,20 +36,19 @@ export class BookingInquiriesComponent implements OnInit {
             'lastName': new FormControl(null, [Validators.required]),
             'mobile': new FormControl(null, [Validators.required, this.phoneLengthValidator.bind(this)]),
             'email': new FormControl(null, [Validators.required, Validators.email]),
-            'image': new FormControl(null, null, mimeType),
-            'message': new FormControl(null, [Validators.required])
+            'image': new FormControl(null, { validators: [Validators.nullValidator], asyncValidators: [mimeType] }),
+           'message': new FormControl(null, [Validators.required])
         });
     }
 
     onImageUpload(event: Event) {
         const file = (event.target as HTMLInputElement).files[0];
-
         if (file === undefined) {
             this.noPreview = true;
             return 0;
         }
         this.bookingForm.patchValue({ image: file });
-        this.bookingForm.get('image').updateValueAndValidity();
+        this.bookingForm.get("image").updateValueAndValidity();
         const reader = new FileReader();
         reader.onload = () => {
             this.imagePreview = reader.result;
@@ -61,7 +60,6 @@ export class BookingInquiriesComponent implements OnInit {
         console.log(this.bookingForm);
         this.bookingService.postForm(this.bookingForm.value.firstName, this.bookingForm.value.lastName, this.bookingForm.value.email, this.bookingForm.value.mobile, this.bookingForm.value.image, this.bookingForm.value.message);
         this.bookingForm.reset();
-        this.router.navigate(["/booking/inquiries/success"]);
     }
 
 

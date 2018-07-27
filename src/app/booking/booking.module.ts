@@ -17,7 +17,8 @@ import { BookingSuccessComponent } from "./booking-success/booking-success.compo
     imports: [
         CommonModule,
         BookingRoutingModule,
-        ReactiveFormsModule],
+        ReactiveFormsModule,
+    ],
     exports: [
 
     ]

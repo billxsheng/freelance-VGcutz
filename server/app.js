@@ -55,9 +55,7 @@ app.use((req, res, next) => {
 app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
   const form = req.body;
   console.log(form);
-  res.status(201).json({
-    message: 'Form successfully submitted'
-  })
+  
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -100,9 +98,9 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
     };
     send.sendInquiry(mailOptions, transporter);
   }
-  
-
-  
+  res.status(201).json({
+    message: 'Form successfully submitted'
+  })
 
 });
 
