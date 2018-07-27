@@ -6,15 +6,34 @@ import {
     NavigationStart,
     NavigationEnd,
     NavigationCancel,
-    NavigationError
+    NavigationError,
+    RouterOutlet
 } from '@angular/router'
+import { trigger, state, transition, style, animate } from '../../node_modules/@angular/animations';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.css'],
+    animations:[
+        trigger('main-router', [
+            state('in', style({
+                opacity: 1
+            })),
+            transition('void => *', [
+                style({opacity: 0}),
+                animate(150)
+            ]),
+            transition('* => void', [
+                style({opacity: 0}),
+                animate(150)
+            ])
+        ])
+    ]
 })
 export class AppComponent {
+
+
     isLoading = true;
 
 
@@ -24,7 +43,7 @@ export class AppComponent {
         });
     }
 
-
+  
     navigationInterceptor(event: RouterEvent): void {
         if (event instanceof NavigationStart) {
             

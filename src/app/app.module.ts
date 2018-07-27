@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,7 +27,7 @@ import { MatProgressSpinnerModule } from '@angular/material';
         SharedModule,
         HttpClientModule,
         MatProgressSpinnerModule,
-        
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { Component, OnInit } from "../../../../node_modules/@angular/core";
 import { FormGroup, FormControl, Validators } from "../../../../node_modules/@angular/forms";
 import { BookingService } from "../booking.service";
 import { Router, ActivatedRoute, Params } from "../../../../node_modules/@angular/router";
+import { mimeType } from "./mime-type.validator";
 
 @Component({
     templateUrl: 'booking-inquiries.component.html',
@@ -35,7 +36,7 @@ export class BookingInquiriesComponent implements OnInit {
             'lastName': new FormControl(null, [Validators.required]),
             'mobile': new FormControl(null, [Validators.required, this.phoneLengthValidator.bind(this)]),
             'email': new FormControl(null, [Validators.required, Validators.email]),
-            'image': new FormControl(null),
+            'image': new FormControl(null, null, mimeType),
             'message': new FormControl(null, [Validators.required])
         });
     }
