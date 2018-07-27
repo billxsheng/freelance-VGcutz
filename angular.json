@@ -29,7 +29,7 @@
                 "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
               }
             ],
-            "scripts": ["./node_modules/jquery/dist/jquery.min.js", "./src/app/core/header/header.js", "./src/app/pricing/pricing.js", "./node_modules/waypoints/lib/jquery.waypoints.min.js", "./node_modules/dropzone/dist/dropzone.js"]
+            "scripts": ["./node_modules/jquery/dist/jquery.min.js", "./src/app/shared/script.js", "./node_modules/waypoints/lib/jquery.waypoints.min.js"]
           },
           "configurations": {
             "production": {

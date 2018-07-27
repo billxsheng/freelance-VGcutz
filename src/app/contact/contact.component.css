@@ -5,6 +5,7 @@
 
 .contact-container {
     margin-bottom: 0;
+    height: auto;
 }
 
 .title {
@@ -30,7 +31,8 @@ hr {
     background-size: cover;
     background-color: transparent !important;
     height: auto;
-    margin-bottom: 0 !important;
+    margin-bottom: 200px !important;
+
 }
 
 .content-arrow {

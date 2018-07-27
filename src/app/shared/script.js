@@ -5,15 +5,24 @@ $(document).ready(function () {
   var mobileNavActivateBtn = $('.nav-mobile-btn');
   var mobileNavLinks = $('.nav-link-mobile')
   var scroll = 0;
+  var modalOpen = $('.modal-open');
+  var modal = $('#sigModal');
 
 
- var waypoint = new Waypoint({
-    element: $('.container-waypoint'), 
+  var waypoint = new Waypoint({
+    element: $('.container-waypoint'),
     handler: function () {
       toggleNav();
-    }, offset:   -1
+    },
+    offset: -1
   });
 
+  // $(function () {
+  //   modalOpen.on('click', function () {
+  //     console.log('clicked');
+  //     modal.modal('show');
+  //   });
+  // });
 
   $(function () {
     mobileNavActivateBtn.on('click', function () {
@@ -37,7 +46,7 @@ $(document).ready(function () {
   })
 
   function toggleNav() {
-    primaryNav.toggleClass([ 'loaded', 'sticky-top'])
+    primaryNav.toggleClass(['loaded', 'sticky-top'])
 
   };
 

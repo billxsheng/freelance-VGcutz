@@ -5,11 +5,23 @@
     <div class="jumbotron">
         <div class="row medias">
             <div class="col-md-12">
-                <a routerLink='../booking'>
+                <a href="" >
                     <div class="contact-content-bookonline contact-content-click text-center">
                         <i class="fas fa-calendar-check icon-large"></i>
                         <h3 #requiredInput>Book Appointment</h3>
-                        <p>Inquiries</p>
+                        <p>Online</p>
+                        <div class="content-arrow">
+                            <i class="fas fa-angle-right icon-small"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-12">
+                <a routerLink='../booking/inquiries'>
+                    <div class="contact-content-bookonline contact-content-click text-center">
+                        <i class="fas fa-calendar-check icon-large"></i>
+                        <h3 #requiredInput>Send Inquiry</h3>
+                        <p>Questions or concerns?</p>
                         <div class="content-arrow">
                             <i class="fas fa-angle-right icon-small"></i>
                         </div>
@@ -17,7 +29,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a target="_blank" href="https://www.instagram.com/vgcutz/">
+                <a target="_blank" href="https://www.instagram.com/vgcuts/">
                     <div class="contact-content contact-content-click text-center">
                         <i class="fab fa-instagram icon-large"></i>
                         <h3>{{businessIG}}</h3>
@@ -67,7 +79,8 @@
             </div>
         </div>
         <hr>
-        <map-component></map-component>
+        
 
     </div>
+    <map-component></map-component>
 </div>
