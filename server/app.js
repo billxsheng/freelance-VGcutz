@@ -99,7 +99,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
     send.sendInquiry(mailOptions, transporter);
   }
   res.status(201).json({
-    message: 'Form successfully submitted'
+    message: 'submitted'
   })
 
 });

@@ -19,6 +19,12 @@ mat-progress-spinner {
     margin-top: 15% !important;
 }
 
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
 @media (max-width: 991px) {
     .controller {
         height: auto;

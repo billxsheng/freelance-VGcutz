@@ -19,11 +19,11 @@ export class BookingService {
         console.log(formData);
         this.http.post('http://localhost:3000/booking/submit', formData).subscribe((responseData) => {
             console.log(responseData);
-            // if(responseData.message === "success") {
-            //     this.router.navigate(["/booking/inquiries/success"]);
-            // } else {
-//
-            // }
+            if(responseData) {
+                this.router.navigate(["/booking/inquiries/success"]);
+            } else {
+                this.router.navigate(["/booking/inquiries/failure"]);
+            }
         })
     }
 

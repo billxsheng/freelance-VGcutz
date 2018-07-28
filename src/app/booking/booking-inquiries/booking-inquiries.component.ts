@@ -1,7 +1,7 @@
-import { Component, OnInit } from "../../../../node_modules/@angular/core";
-import { FormGroup, FormControl, Validators } from "../../../../node_modules/@angular/forms";
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { BookingService } from "../booking.service";
-import { Router, ActivatedRoute, Params } from "../../../../node_modules/@angular/router";
+import { ActivatedRoute} from "@angular/router";
 import { mimeType } from "./mime-type.validator";
 
 @Component({

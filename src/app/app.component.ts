@@ -9,7 +9,7 @@ import {
     NavigationError,
     RouterOutlet
 } from '@angular/router'
-import { trigger, state, transition, style, animate } from '../../node_modules/@angular/animations';
+import { trigger, state, transition, style, animate, query } from '../../node_modules/@angular/animations';
 
 @Component({
     selector: 'app-root',
@@ -17,18 +17,24 @@ import { trigger, state, transition, style, animate } from '../../node_modules/@
     styleUrls: ['./app.component.css'],
     animations:[
         trigger('main-router', [
-            state('in', style({
-                opacity: 1
-            })),
-            transition('void => *', [
-                style({opacity: 0}),
-                animate(2000)
-            ]),
-            transition('* => void', [
-                style({opacity: 0}),
-                animate(2000)
+            transition('* => *', [
+              query(
+                ':enter',
+                [style({ opacity: 0 })],
+                { optional: true }
+              ),
+              query(
+                ':leave',
+                [style({ opacity: 1 }), animate('0.3s', style({ opacity: 0 }))],
+                { optional: true }
+              ),
+              query(
+                ':enter',
+                [style({ opacity: 0 }), animate('0.3s', style({ opacity: 1 }))],
+                { optional: true }
+              )
             ])
-        ])
+          ])
     ]
 })
 export class AppComponent {
