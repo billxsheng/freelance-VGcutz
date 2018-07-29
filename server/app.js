@@ -119,22 +119,17 @@ app.get('/gallery', (req, res) => {
   const galleryItems = [{
       name: 'Low Top Fade',
       description: 'Low top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/0.jpeg"
     },
     {
       name: 'High Top Fade',
       description: 'High top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/1.jpeg"
     },
     {
       name: 'Combover',
       description: 'To the side',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description: 'All gone',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/2.jpeg"
     }
   ]
   res.status(201).json({
@@ -157,22 +152,17 @@ app.get('/gallery/:id', (req, res) => {
   const galleryItems = [{
       name: 'Low Top Fade',
       description: 'Low top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/0.jpeg"
     },
     {
       name: 'High Top Fade',
       description: 'High top, short sides',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/1.jpeg"
     },
     {
       name: 'Combover',
       description: 'To the side',
-      imagePath: "../../../assets/resources/julio.jpg"
-    },
-    {
-      name: 'Buzzcut',
-      description: 'All gone',
-      imagePath: "../../../assets/resources/julio.jpg"
+      imagePath: "../../../assets/resources/cuts/2.jpeg"
     }
   ]
 

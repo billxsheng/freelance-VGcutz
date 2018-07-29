@@ -1,12 +1,12 @@
 <div class="gallery-list-container" backgroundmain>
-    <div class="text-center">
-        <h1 [ngStyle]="{'color':'black;'}">GALLERY</h1>
-    </div>
-    <div class="jumbotron gallery">
-            <mat-spinner *ngIf="isLoading" mode="indeterminate"></mat-spinner>
-            <div *ngIf="!isLoading" class="wrapper">
-                <gallery-list-item-component (exampleAdded)="onPracticeClick($event)" *ngFor="let galleryItemEl of galleryItems; let i = index"
-                    [galleryItem]=galleryItemEl [index]=i></gallery-list-item-component>
-            </div>
-    </div>
-
+  <div class="text-center">
+    <h1 [ngStyle]="{'color':'black;'}">GALLERY</h1>
+  </div>
+  <div class="jumbotron container">
+    <mat-spinner *ngIf="isLoading" mode="indeterminate"></mat-spinner>
+    <div class="wrapper col-md-6" *ngFor="let galleryItemEl of galleryItems; let i = index">
+      <a  style="cursor: pointer;" [routerLink]="[i]" routerLinkActive="active">
+        <img [src]="[galleryItemEl.imagePath]" class="img-responsive" style="max-height: 200px;">
+      </a>
+      </div>
+  </div>
