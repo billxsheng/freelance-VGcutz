@@ -2,7 +2,10 @@ import { GalleryItem } from "./gallery-item.model";
 import { HttpClient } from "../../../node_modules/@angular/common/http";
 import { Injectable } from "../../../node_modules/@angular/core";
 import { Subject } from "../../../node_modules/rxjs";
-import { EventEmitter } from "@angular/core";
+import {environment} from '../../environments/environment';
+
+const BACKEND_URL = environment.apiURL + "/gallery";
+
 
 @Injectable({providedIn: "root"})
 export class GalleryService {
@@ -15,7 +18,7 @@ export class GalleryService {
 
     getGalleryItems() {
         console.log('Getting items.');
-        this.http.get<{galleryItems: GalleryItem[]}>('http://localhost:3000/gallery').subscribe((getData) => {
+        this.http.get<{galleryItems: GalleryItem[]}>(BACKEND_URL).subscribe((getData) => {
             console.log(getData.galleryItems);
             this.galleryItems = getData.galleryItems;
             //emits copy of gallery items after they are updated
@@ -31,7 +34,7 @@ export class GalleryService {
     
     getItem(id) {
         console.log('Getting selected item');
-        this.http.get<{galleryItems:GalleryItem}>('http://localhost:3000/gallery/' + id).subscribe((getData) => {
+        this.http.get<{galleryItems:GalleryItem}>(BACKEND_URL + '/' + id).subscribe((getData) => {
             console.log(getData);
             this.selectedItem = getData.galleryItems;
             this.selectedItemUpdated.next(this.selectedItem);

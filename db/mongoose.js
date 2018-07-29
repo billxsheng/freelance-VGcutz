@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const {keys} = require('../server/keys');
 
 console.log('db');
-mongoose.connect(/* process.env.MONGODB_URI ||  */'mongodb://localhost:27017/vcutz');
+mongoose.connect( keys.mongo.URI);
 
 
 module.exports = {

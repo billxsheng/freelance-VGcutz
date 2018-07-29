@@ -1,7 +1,10 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "../../../node_modules/@angular/core";
-import { Form } from "./form.model";
 import { Router } from "../../../node_modules/@angular/router";
+import {environment} from '../../environments/environment';
+
+
+const BACKEND_URI = environment.apiURL + '/booking';
 
 @Injectable()
 export class BookingService {
@@ -17,7 +20,7 @@ export class BookingService {
         formData.append("image", image, email);
         formData.append("message", message);
         console.log(formData);
-        this.http.post('http://localhost:3000/booking/submit', formData).subscribe((responseData) => {
+        this.http.post(BACKEND_URI + '/submit', formData).subscribe((responseData) => {
             console.log(responseData);
             if(responseData) {
                 this.router.navigate(["/booking/inquiries/success"]);

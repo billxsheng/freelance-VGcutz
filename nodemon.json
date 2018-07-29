@@ -1,0 +1,5 @@
+{
+    "env": {
+        "dbURI": "mongodb://<dbuser>:<dbpassword>@ds147461.mlab.com:47461/vcuts"
+    }
+}
