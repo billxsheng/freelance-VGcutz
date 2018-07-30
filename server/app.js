@@ -7,6 +7,7 @@ var keys = require('./keys');
 var nodemailer = require('nodemailer');
 var db = require('../db/mongoose');
 var GalleryItem = require('../db/models/gallery-item');
+const path = require('path');
 
 const MIME_TYPE_MAP = {
   'image/png': 'png',
@@ -37,6 +38,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
+//app.use("/", express.static(path.join(__dirname, "dist")));
+
+
+
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 
 
 app.use((req, res, next) => {
@@ -96,7 +105,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
       ${req.body.message}
       `
     };
-    send.sendInquiry(mailOptions, transporter);
+    //send.sendInquiry(mailOptions, transporter);
   }
   res.status(201).json({
     message: 'submitted'
