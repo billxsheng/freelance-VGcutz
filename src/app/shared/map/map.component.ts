@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 export class MapComponent {
     latitude =  43.473178;
     longitude = -80.532913;
-    address: String = 'Sunview Street & University Street West';
+    address: String = 'UW/WLU Area';
     time: String = 'Fall 2018'
     city: String = 'Waterloo, ON'
 

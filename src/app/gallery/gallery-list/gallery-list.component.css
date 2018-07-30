@@ -3,14 +3,6 @@ mat-spinner {
   top: 15px;
 }
 
-h1 {
-  text-align: center;
-  position: relative;
-  top: 30px;
-  font-size: 70px;
-  width: 100% !important;
-}
-
 .jumbotron {
   background-color: transparent !important;
   margin-bottom: 0 !important;

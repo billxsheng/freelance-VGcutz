@@ -1,5 +1,4 @@
 * {
-    font-family: 'Lilita One';
     color: black;
 }
 
@@ -61,14 +60,6 @@ h3 {
     position: relative;
     top: 10px;
     padding: 5px;
-}
-
-h1 {
-    text-align: center;
-    position: relative;
-    top: 30px;
-    font-size: 70px;
-    background-color: transparent;
 }
 
 .contact-content,

@@ -1,18 +1,7 @@
-* {
-    font-family: 'Lilita One'
-}
-
 .container {
     height: 100%;
 }
 
-h1 {
-    text-align: center;
-    position: relative;
-    top: 30px;
-    margin: 0 auto;
-    font-size: 70px;
-}
 
 a {
     margin: 70px 0;

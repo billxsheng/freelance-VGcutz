@@ -3,6 +3,9 @@
     padding: 0 !important;
 }
 
+.screen {
+    min-height: 100vh;
+}
 
 .loading-overlay {
     position: fixed;

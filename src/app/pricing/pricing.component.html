@@ -1,36 +1,35 @@
-<div class="pricing-container" backgroundmain>
-    <div class="container">
-            <h1 [ngStyle] = "{'color':'black'}" >PRICING</h1>    
+<html>
+<div class="container" backgroundmain>
+  <div class="container">
+    <h1 class="title" [ngStyle]="{'color':'black'}">PRICING</h1>
+  </div>
+  <div class="jumbotron pricing">
+    <div class="col-md-12 text-center pricing-content">
+      <h3>Haircut</h3>
+      <i class="fas fa-cut"></i>
+      <h3>$15</h3>
+      <button class="btn btn-primary details-btn modal-open" data-toggle="modal" data-target="#sigModal">Details</button>
     </div>
-    <div class="jumbotron pricing">
-        <div class="col-md-12 text-center pricing-content">
-            <h3>Haircut + Fade</h3>
-            <i class="fas fa-cut"></i>
-            <h3>$15</h3>
-            <button class="btn btn-primary details-btn modal-open" data-toggle="modal" data-target="#sigModal">Details</button>
-        </div>
-    </div>
+  </div>
 
-    <div class="modal fade"  id="sigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Haircut + Fade</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Details go here.
-            </div>
-            <div class="modal-footer">
-              <button  [disabled] = "!btnOn" type="button" data-dismiss="modal" class="btn btn-primary details-btn">Close</button>
-            </div>
-          </div>
+  <div class="modal fade" id="sigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Haircut</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Details go here.
+        </div>
+        <div class="modal-footer">
+          <button [disabled]="!btnOn" type="button" data-dismiss="modal" class="btn btn-primary details-btn">Close</button>
         </div>
       </div>
-
-
-
-
+    </div>
+  </div>
 </div>
+
+</html>

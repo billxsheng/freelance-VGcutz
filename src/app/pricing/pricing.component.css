@@ -1,23 +1,6 @@
-* {
-    font-family: 'Lilita One'
-}
-
-h1 {
-    text-align: center;
-    position: relative;
-    top: 30px;
-    font-size: 70px;
-}
-
-.pricing-container {
-    background-color: white !important;
-}
-
 .pricing * {
     padding: 10px;
 }
-
-
 
 .details-btn {
     background: linear-gradient(to bottom right, rgb(9, 9, 99), rgb(18, 11, 119)) !important;

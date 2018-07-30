@@ -1,44 +1,17 @@
-* {
-    font-family: 'Lilita One'
-}
-
-.jumbotron {
-    background-color: transparent;
+.hero {
+    background-image: url('../../assets/resources/hero/hero.jpeg');
+    background-position: center top;
+    background-size: 100% auto;
+    height: auto;
 }
 
 .home-container {
     height: auto;
 }
 
-
-
-h1 {
-    text-align: center;
-    position: relative;
-    top: 30px;
-    font-size: 70px;
-    color: white;
-}
-
 hr {
     width: 50%;
 }
-
-.hero {
-    background-color: transparent;
-    height: auto;
-    margin-bottom: 0 !important;
-}
-
-p {
-    font-family: 'roboto'
-}
-
-.options {
-    background-color: white;
-}
-
-
 
 .options a,
 .options a:visited {
@@ -69,10 +42,6 @@ p {
 .options-div-hr {
     margin-top: 20px;
     width: 50%;
-}
-
-.main div {
-    display: inline-block !important;
 }
 
 i {
