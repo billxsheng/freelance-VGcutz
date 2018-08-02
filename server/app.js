@@ -53,6 +53,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
+ });
+
 app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
   const form = req.body;
   console.log(form);
@@ -172,9 +176,7 @@ app.get('/gallery/:id', (req, res) => {
   // })
  })
 
- app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
- });
+
 
 
 
