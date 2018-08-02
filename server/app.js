@@ -97,7 +97,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
       ${req.body.message}
       `
     };
-    //send.sendInquiry(mailOptions, transporter);
+    send.sendInquiry(mailOptions, transporter);
   }
   res.status(201).json({
     message: 'submitted'

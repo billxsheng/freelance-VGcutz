@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: "http://localhost:3000"
+  apiURL: "http://vcuts-env.angsmzpppj.ca-central-1.elasticbeanstalk.com"
 };
