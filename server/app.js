@@ -8,7 +8,6 @@ var nodemailer = require('nodemailer');
 var db = require('../db/mongoose');
 var GalleryItem = require('../db/models/gallery-item');
 const path = require('path');
-
 const MIME_TYPE_MAP = {
   'image/png': 'png',
   'image/jpeg': 'jpeg',
@@ -55,7 +54,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
- });
+});
 
 app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
   const form = req.body;
@@ -175,7 +174,6 @@ app.get('/gallery/:id', (req, res) => {
   //   galleryItems: galleryItems[req.params.id]
   // })
  })
-
 
 
 

@@ -17,23 +17,21 @@ export class GalleryService {
     private galleryItemsUpdated = new Subject<GalleryItem[]>();
 
     getGalleryItems() {
-        console.log('Getting items.');
-        this.http.get<{galleryItems: GalleryItem[]}>(BACKEND_URL).subscribe((getData) => {
-            console.log(getData.galleryItems);
+        console.log(1);
+        this.http.get<{galleryItems: GalleryItem[]}>("http://localhost:3000/gallery").subscribe((getData) => {
             this.galleryItems = getData.galleryItems;
-            //emits copy of gallery items after they are updated
             this.galleryItemsUpdated.next([...this.galleryItems]);
         });
-        console.log(1);
+        console.log(2);
     }
 
+    
+
     getGalleryItemsListener() {
-        console.log('Update listener');
         return this.galleryItemsUpdated.asObservable();
     }
     
     getItem(id) {
-        console.log('Getting selected item');
         this.http.get<{galleryItems:GalleryItem}>(BACKEND_URL + '/' + id).subscribe((getData) => {
             console.log(getData);
             this.selectedItem = getData.galleryItems;
