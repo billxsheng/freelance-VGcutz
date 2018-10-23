@@ -1,8 +1,14 @@
 .hero {
-    background-image: url('../../assets/resources/hero/hero.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/resources/hero/hero.jpeg');
     background-position: center top;
     background-size: 100% auto;
-    height: auto;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 150px;
+    color: white; 
+    padding: 100px 0 0 100px;
 }
 
 .home-container {
@@ -49,21 +55,6 @@ i {
     margin-bottom: 10px;
 }
 
-.fa-thumbs-up {
-    color: rgb(255, 233, 111);
-}
-
-.fa-calendar-check {
-    color: rgb(247, 204, 255);
-}
-
-.fa-dollar-sign {
-    color: forestgreen;
-}
-
-.fa-image {
-    color: rgb(145, 196, 245);
-}
 
 @media (max-width: 480px) {
     .home-container {

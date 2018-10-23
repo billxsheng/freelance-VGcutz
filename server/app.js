@@ -68,7 +68,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
       pass: keys.keys.emailInfo.password,
     }
   });
-  if(req.file !== undefined) {
+  if (req.file !== undefined) {
     var mailOptions = {
       attachments: [
         {
