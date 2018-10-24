@@ -51,15 +51,8 @@ app.use((req, res, next) => {
   );
   next();
 });
-
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
-});
-
 app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res) => {
-  const form = req.body;
-  console.log(form);
-  
+  const form = req.body;  
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -174,7 +167,11 @@ app.get('/gallery/:id', (req, res) => {
   //   galleryItems: galleryItems[req.params.id]
   // })
  })
+ app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
+  });
 
+ app.listen(3000);
 
 
 

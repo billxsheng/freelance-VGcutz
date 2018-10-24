@@ -18,7 +18,7 @@ export class GalleryService {
 
     getGalleryItems() {
         console.log(1);
-        this.http.get<{galleryItems: GalleryItem[]}>("http://localhost:3000/gallery").subscribe((getData) => {
+        this.http.get<{galleryItems: GalleryItem[]}>(BACKEND_URL).subscribe((getData) => {
             this.galleryItems = getData.galleryItems;
             this.galleryItemsUpdated.next([...this.galleryItems]);
         });
