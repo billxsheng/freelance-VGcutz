@@ -1,5 +1,5 @@
 # VCuts
-<b>Technologies used:<b>
+<b>Technologies used:</b>
 <br>
 HTML/CSS
 <br>
