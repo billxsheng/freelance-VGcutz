@@ -102,7 +102,6 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
 });
 
 app.get('/gallery', (req, res) => {
-  console.log('yeet');
   GalleryItem.find({}, (err, items) => {
     console.log('starts');
     if (err) {
@@ -169,7 +168,7 @@ app.get('/gallery/:id', (req, res) => {
  })
  app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, '/../dist/vgcutz/index.html'));
-  });
+});
 
  app.listen(3000);
 

@@ -1,12 +1,12 @@
 .container {
-    height: 100%;
 }
 
+.booking-container {
+    margin-top: 120px;
+    height: 80vh;
+}
 
 a {
-    margin: 70px 0;
-}
-
-a:first-child {
-    top: 40px;
+    margin: 50px 0;
+    display: inline-block !important;
 }

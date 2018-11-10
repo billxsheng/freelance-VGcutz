@@ -17,15 +17,12 @@ export class GalleryService {
     private galleryItemsUpdated = new Subject<GalleryItem[]>();
 
     getGalleryItems() {
-        console.log(1);
         this.http.get<{galleryItems: GalleryItem[]}>(BACKEND_URL).subscribe((getData) => {
             this.galleryItems = getData.galleryItems;
             this.galleryItemsUpdated.next([...this.galleryItems]);
         });
-        console.log(2);
     }
 
-    
 
     getGalleryItemsListener() {
         return this.galleryItemsUpdated.asObservable();
