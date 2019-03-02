@@ -38,11 +38,7 @@ import { trigger, state, transition, style, animate, query } from '../../node_mo
     ]
 })
 export class AppComponent {
-
-
     isLoading = true;
-
-
     constructor(private router: Router) {
         router.events.subscribe((event: RouterEvent) => {
             this.navigationInterceptor(event)

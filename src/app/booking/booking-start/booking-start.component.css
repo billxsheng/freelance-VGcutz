@@ -7,6 +7,17 @@
 }
 
 a {
-    margin: 50px 0;
+    margin: 100px 0;
     display: inline-block !important;
+}
+
+.booking-start-div {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 20px;
 }

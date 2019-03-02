@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {keys} = require('../server/keys');
 
 console.log('db');
-mongoose.connect( keys.mongo.URI);
+mongoose.connect(keys.mongo.URI, { useNewUrlParser: true });
 
 
 module.exports = {

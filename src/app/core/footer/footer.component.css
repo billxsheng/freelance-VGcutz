@@ -5,9 +5,8 @@
 }
 
 footer {
-    background-color:#ccc0ae;
+    background-color:transparent;
     height: 120px;
-    box-shadow:  0 0 25px #ccc;
 }
 
 .btn-social a {
