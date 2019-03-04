@@ -33,7 +33,7 @@ const storage = multer.diskStorage({
     if (isValid) {
       error = null;
     }
-    cb(error, "server/images");
+    cb(error, "/server/images");
   },
   filename: (req, file, cb) => {
     const name = file.originalname
@@ -59,7 +59,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
       pass: keys.keys.emailInfo.password,
     }
   });
-  if (req.file !== undefined) {
+  if (req.file) {
     var mailOptions = {
       attachments: [
         {
@@ -82,7 +82,7 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
   } else {
     var mailOptions = {
       from: keys.keys.emailInfo.username,
-      to: keys.keys.personalEmail.testAddress,
+      to: keys.keys.personalEmail.Address,
       subject: `Customer inquiry from ${req.body.firstName} ${req.body.lastName}.`,
       text: `
       Client Name: ${req.body.firstName} ${req.body.lastName}

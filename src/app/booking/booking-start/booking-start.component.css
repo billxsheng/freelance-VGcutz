@@ -12,12 +12,42 @@ a {
 }
 
 .booking-start-div {
-    width: 350px;
-    height: 350px;
-    box-shadow: 0 0 20px #ccc;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
+    box-shadow: 0 0 20px #ccc;
+    transition: transform 0.2s;
+}
+
+.booking-start-div:hover {
+    text-decoration: none;
+    transform: scale(1.05)
 }
 
 .content {
-    padding: 20px;
+    padding: 80px;
+    color: black;
 }
+
+.content i {
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .booking-start-div {
+        width: 200px;
+        height: 200px;
+        margin-top: 80px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .div-wrapper {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+

@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { BookingService } from "../booking.service";
 import { ActivatedRoute} from "@angular/router";
-import { mimeType } from "./mime-type.validator";
+// import { mimeType } from "./mime-type.validator";
 
 @Component({
     templateUrl: 'booking-inquiries.component.html',
@@ -14,14 +14,14 @@ export class BookingInquiriesComponent implements OnInit {
 
     phonelimit: number = 10;
     bookingForm: FormGroup;
-    req: String = 'This field is required';
+    req: string = 'This field is required';
     emailReq: string = 'Please enter a valid email.'
     dateReq: string = 'Please schedule a valid date.';
     timeReq: string = 'Please schedule a valid time.';
     paymentTypes = ['Cash', 'eTransfer'];
     currentDate;
     formSubmitted = false;
-    imagePreview: String;
+    imagePreview: string | ArrayBuffer;
     noPreview: Boolean = false;
 
 
@@ -36,7 +36,7 @@ export class BookingInquiriesComponent implements OnInit {
             'lastName': new FormControl(null, [Validators.required]),
             'mobile': new FormControl(null, [Validators.required, this.phoneLengthValidator.bind(this)]),
             'email': new FormControl(null, [Validators.required, Validators.email]),
-            'image': new FormControl(null, { validators: [Validators.nullValidator], asyncValidators: [mimeType] }),
+            'image': new FormControl(null, { validators: [Validators.nullValidator] }),
            'message': new FormControl(null, [Validators.required])
         });
     }
