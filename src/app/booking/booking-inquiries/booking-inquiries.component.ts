@@ -22,6 +22,7 @@ export class BookingInquiriesComponent implements OnInit {
     currentDate;
     formSubmitted = false;
     imagePreview: string | ArrayBuffer;
+    //added arraybuffer ^
     noPreview: Boolean = false;
 
 
@@ -36,7 +37,9 @@ export class BookingInquiriesComponent implements OnInit {
             'lastName': new FormControl(null, [Validators.required]),
             'mobile': new FormControl(null, [Validators.required, this.phoneLengthValidator.bind(this)]),
             'email': new FormControl(null, [Validators.required, Validators.email]),
-            'image': new FormControl(null, { validators: [Validators.nullValidator] }),
+            'image': new FormControl(null, { validators: [Validators.nullValidator]
+                // , asyncValidators: [mimeType]
+             }),
            'message': new FormControl(null, [Validators.required])
         });
     }
