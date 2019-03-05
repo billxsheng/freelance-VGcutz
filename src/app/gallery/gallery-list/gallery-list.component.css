@@ -25,8 +25,20 @@ mat-spinner {
 .wrapper a img:hover {
     transform: scale(1.05);
     opacity: 1;
-    box-shadow: 0 0 30px rgb(150, 150, 150);}
+    box-shadow: 0 0 30px rgb(150, 150, 150);
+  }
 
-.container {
-    max-width: 65%;
+
+.gallery-row {
+  padding: 0 150px 0 150px;
+  margin-top: 50px;
 }
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+    max-width: none;
+  }
+
+}
+

@@ -13,10 +13,21 @@
 }
 .btn-next {
     margin-right: 50px;
+    padding: 7px 20px;
+    border-radius: 70px;
+    font-size: 30px;
+}
+
+.gallery-item-img {
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ccc;
 }
 
 .btn-prev {
     margin-left: 50px;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 30px;
 }
 
 div {

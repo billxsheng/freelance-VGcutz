@@ -2,7 +2,7 @@
   <div class="text-center">
     <h1 class="title" [ngStyle]="{'color':'black;'}">GALLERY</h1>
   </div>
-  <div class="jumbotron container">
+  <div class="gallery-row jumbotron container">
     <mat-spinner *ngIf="isLoading" mode="indeterminate"></mat-spinner>
     <div class="wrapper col-md-6" *ngFor="let galleryItemEl of galleryItems; let i = index">
       <a  style="cursor: pointer;" [routerLink]="[i]" routerLinkActive="active">

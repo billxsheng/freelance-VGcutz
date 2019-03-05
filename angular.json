@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vgcutz:build"
+            "browserTarget": "vcuts:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vgcutz:build:production"
+              "browserTarget": "vcuts:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vgcutz:build"
+            "browserTarget": "vcuts:build"
           }
         },
         "test": {
@@ -110,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vgcutz:serve"
+            "devServerTarget": "vcuts:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vgcutz:serve:production"
+              "devServerTarget": "vcuts:serve:production"
             }
           }
         },
@@ -130,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "vgcutz"
+  "defaultProject": "vcuts"
 }

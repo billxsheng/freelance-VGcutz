@@ -12,7 +12,7 @@ export class GalleryItemDetailComponent implements OnInit {
     selectedItem: GalleryItem;
     prevId: Number;
     nextId: Number;
-    listLength: Number = 4;
+    listLength: Number = 3;
     disablePrev: Boolean = false;
     disableNext: Boolean = false;
 

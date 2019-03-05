@@ -39,6 +39,7 @@ input.ng-valid, textarea.ng-valid {
 
 .no-border {
     border: 3px dotted rgb(0, 153, 255) !important;
+    height: 50px;
 }
 
 @media (max-width: 480px) {
