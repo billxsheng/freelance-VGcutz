@@ -10,10 +10,6 @@ nav {
     width: 100vw;
 }
 
-.navbar-brand {
-    margin-left: 1rem !important;
-}
-
 .navbar-fixed-top {
     min-height: 80px;
 }
@@ -42,22 +38,9 @@ nav {
     color: #000;
 }
 
-.nav-primary, .nav-mobile-content {
+.nav-primary {
     transition: all 300ms ease ;
-    height: 110px;
-}
-
-.nav-mobile {
-    transition: all 300ms ease;
-    background: linear-gradient(to bottom , rgb(255, 255, 255), rgba(255, 255, 255, 0.836)) !important;
-    height: 110px;
-    position: fixed;
-    top: -500px !important;
-    display: none;
-}
-
-.nav-mobile-content {
-    height: 500px !important;
+    height: 100px;
 }
 
 nav a {
@@ -65,7 +48,11 @@ nav a {
 }
 
 .logo {
-    max-height: 80px !important;
+    max-height: 60px !important;
+}
+
+.logo-wrapper {
+    padding: 20px;
 }
 
 
@@ -87,7 +74,6 @@ nav a {
 @media (max-width: 480px) {
     
 .nav-primary {
-    display: none;
 }
 .nav-mobile {
     display: block;

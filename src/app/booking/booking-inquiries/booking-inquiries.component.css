@@ -42,8 +42,10 @@ input.ng-valid, textarea.ng-valid {
     height: 50px;
 }
 
+
 @media (max-width: 480px) {
     .booking-container {
         margin-top: 100px;
     }
 }
+

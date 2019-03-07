@@ -1,17 +1,19 @@
-<div class="col-md-2 text-center">
-        <button [disabled] = "disablePrev" routerLink = "../{{prevId}}" class="btn-prev btn btn-primary"><i class="fas fa-chevron-left"></i>
-
-        </button>
-    </div>
-<div class="col-md-8 container text-center" *ngIf = "selectedItem">
-    <h1>{{selectedItem.name}}</h1>
-    <p>{{selectedItem.description}}</p>
-    <a class="btn btn-primary">Book</a>
-    <br>
-    <img src="{{selectedItem.imagePath}}" alt="{{selectedItem.name}}" class="gallery-item-img image-responsive" [ngStyle] = "{'max-height': '360px'}" >
-</div>
-<div class="col-md-2 text-center">
-    <button [disabled] = "disableNext" routerLink = "../{{nextId}}" class="btn-next btn btn-primary"><i class="fas fa-chevron-right"></i>
-
-    </button>
+<div class="wrapper">
+  <div class="row content-row">
+      <div class="col-md-3 btn-col">
+          <button [disabled]="disablePrev" routerLink="../{{prevId}}" class="btn-prev btn"><i class="fas fa-chevron-left"></i></button>
+        </div>
+        <div class="headings col-md-6 text-center" *ngIf="selectedItem">
+          <div class="headings-content">
+              <h1>{{selectedItem.name}}</h1>
+              <p>{{selectedItem.description}}</p>
+          </div>
+        </div>
+        <div class="col-md-3 btn-col">
+          <button [disabled]="disableNext" routerLink="../{{nextId}}" class="btn-next btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+  </div>
+  <div class="row">
+    <img src="{{selectedItem.imagePath}}" alt="{{selectedItem.name}}" class="gallery-item-img image-responsive">
+  </div>
 </div>

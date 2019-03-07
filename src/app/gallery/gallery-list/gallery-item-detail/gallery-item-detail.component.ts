@@ -36,10 +36,8 @@ export class GalleryItemDetailComponent implements OnInit {
 
     pageAccess(index) {
         this.disablePrev = this.disableNext = false;
-        console.log(this.listLength);
         this.prevId = index - 1;
         this.nextId = index + 1;
-        console.log(this.prevId, this.nextId);
         if ((index-1) < 0) {
             this.disablePrev = true;
         } else {
@@ -53,6 +51,4 @@ export class GalleryItemDetailComponent implements OnInit {
         }
 
     }
-
-
 }

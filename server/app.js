@@ -101,7 +101,6 @@ app.post('/booking/submit',multer({storage: storage}).single('image'), (req, res
 
 app.get('/gallery', (req, res) => {
   GalleryItem.find({}, (err, items) => {
-    console.log('starts');
     if (err) {
       console.log(err);
     } else {
@@ -136,7 +135,6 @@ app.get('/gallery/:id', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(items[req.params.id]);
       res.status(201).json({
         galleryItems: items[req.params.id]
       })
