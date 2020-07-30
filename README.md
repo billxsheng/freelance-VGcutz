@@ -1,2 +1,2 @@
 # freelance-vcuts
-MEAN stack barber web application ✂️
+A web application built for a local barber. Built using Node, Angular, and MongoDB. 
